@@ -2,12 +2,12 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const mainRoute = require("./routes/main-route");
+// const mainRoute = require("./routes/main-route");
 const app = express();
 
 
 app.use(bodyParser.json());
-app.use("/", mainRoute);
+// app.use("/", mainRoute);
 app.use(express.static(__dirname + "/app"));
 
 

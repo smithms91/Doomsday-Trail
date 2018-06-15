@@ -1,15 +1,25 @@
 "use strict";
 function foodService($http) {
   // Declare the functions to make GET, POST, PUT, and DELETE requests from this service.
+  let finalFoodDetails = [];
 
-  const getFoodItems = () => {
-    return $http({
-      method: "GET",
-      url: "https://nutritionix-api.p.mashape.com/v1_1/search/chicken?fields=item_name%2Cnf_calories%2Cnf_total_fat"
-    }).then((response) => {
-        console.log(response.data);
-        return response.data;
-    });
+  const getFoodItems = (foodDatabase) => {
+    for (let i = 0; i < foodDatabase.length; i++) {
+      $http({
+            method: "GET",
+            url: `https://trackapi.nutritionix.com/v2/search/instant?query=${foodDatabase[i]}`,
+            headers: {
+              'Content-Type':'application/json', 
+              'x-app-id':'41610192', 
+              'x-app-key':'13bc79b7f7a28a177da940ede4565591'
+          }
+      }).then((response) => {
+        finalFoodDetails.push(response.data);
+      });
+
+    }
+    console.log(finalFoodDetails);
+    return finalFoodDetails;
   };
 
 
@@ -46,3 +56,18 @@ angular
   //   });
   // };
 
+
+    // 
+
+    // return $http({
+    //   method: "GET",
+    //   url: "https://trackapi.nutritionix.com/v2/search/instant?query=cheese",
+    //   headers: {
+    //     'Content-Type':'application/json', 
+    //     'x-app-id':'41610192', 
+    //     'x-app-key':'13bc79b7f7a28a177da940ede4565591'
+    //   }
+    // }).then((response) => {
+    //     console.log(response.data);
+    //     return response.data;
+    // });
