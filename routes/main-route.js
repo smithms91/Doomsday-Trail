@@ -3,19 +3,19 @@
 const express = require("express");
 const mainRouter = express.Router();
 
-mainRouter.get("/", (req,res) => {
+mainRouter.get("/", (request, response) => {
 
 });
 
-mainRouter.post("/", (req,res) => {
+mainRouter.post("/", (request, response) => {
 
 });
 
-mainRouter.put("/", (req,res) => {
+mainRouter.put("/", (request, response) => {
 
 });
 
-mainRouter.delete("/", (req,res) => {
+mainRouter.delete("/", (request, response) => {
 
 });
 
