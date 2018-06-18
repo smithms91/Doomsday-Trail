@@ -2,12 +2,58 @@
 function foodService($http) {
   // Declare the functions to make GET, POST, PUT, and DELETE requests from this service.
   let finalFoodDetails = [];
+  let foodWordlist = [
+    "Cheese",
+    "Eggs",
+    "Milk",
+    "Bananas",
+    "Cereal",
+    "Chicken", 
+    "Canned food - soup",
+    "Marshmallows",
+    "Apple",
+    "Banana",
+    "Onion",
+    "Potato",
+    "Canned Food - Beans",
+    "Tomatoes",
+    "Peanut Butter",
+    "Tub of Lard",
+    "Pop",
+    "Candy Bar",
+    "Oranges",
+    "Loaf of Bread",
+    "Rice",
+    "Canned Food - Tuna",
+    "Canned Food - Tomato Sauce",
+    "Instant Ramen",
+    "Hot Dogs",
+    "Pretzels",
+    "Bag of Peanuts",
+    "Bag of Almonds",
+    "Trail Mix",
+    "Beef Jerky Bag",
+    "Carrots",
+    "Twinkies",
+    "Chips",
+    "Cucumbers",
+    "Popcorn",
+    "Celery",
+    "Avocado",
+    "Broccoli"
+    ];
+
+  let locations = [
+    {name: "Home", foodSize: 6},
+    {name: "Gas Station", foodSize: 8},
+    {name: "Super Market", foodSize: 10}
+    ];
 
   const getFoodItems = (foodDatabase) => {
     for (let i = 0; i < foodDatabase.length; i++) {
       $http({
             method: "GET",
-            url: `https://trackapi.nutritionix.com/v2/search/instant?query=${foodDatabase[i]}`,
+            url: `https://trackapi.nutritionix.com/v2/search/instant?query=${foodDatabase}`,
             headers: {
               'Content-Type':'application/json', 
               'x-app-id':'41610192', 
@@ -22,6 +68,9 @@ function foodService($http) {
     return finalFoodDetails;
   };
 
+  const randomizeFoods = () => {
+    
+  }
 
   return {
     getFoodItems
@@ -32,7 +81,7 @@ angular
   .module("app")
   .factory("foodService", foodService);
 
-  
+
     // FOR NOW, COMMENT THIS OUT, IN CASE WE USE A DATABASE
   // const addStudent = (newStudent) => {
   //   return $http({

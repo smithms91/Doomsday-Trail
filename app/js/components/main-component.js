@@ -10,14 +10,19 @@ const mainComponent = {
     `,
     controller: ["foodService", "$location", function(foodService, $location) {
         const vm = this;
-
-        vm.foodDatabase = ["cheese", "eggs",];
-
-        vm.foodResult = foodService.getFoodItems(vm.foodDatabase);
-        console.log(vm.foodResult);
+        vm.tempFoodArray = [];
+        
+        for (let i = 0; i < vm.foodDatabase.length; i++) {
+            vm.tempFoodArray.push(foodService.getFoodItems(vm.foodDatabase[i]));
+        }
+        console.log(vm.foodArray);
 
         vm.nextPage = () => {
             $location.path("/second-component");
+        }
+
+        vm.getRandomFoods = () => {
+          
         }
     }]
 }
