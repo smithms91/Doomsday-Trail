@@ -1,9 +1,7 @@
 "use strict";
 
 const secondComponent = {
-    template: `
-        <p>Testing</p>
-    `,
+    templateUrl: `../templates/prepper-stats.template.html`,
     controller: ["foodService", "$location", function(foodService, $location) {
         const vm = this;
 

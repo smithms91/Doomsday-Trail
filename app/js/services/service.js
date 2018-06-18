@@ -2,6 +2,8 @@
 function foodService($http) {
   // Declare the functions to make GET, POST, PUT, and DELETE requests from this service.
   let finalFoodDetails = [];
+  let bugOutBag = [];
+  let foodsAtLocation = [];
   let foodWordlist = [
     "Cheese",
     "Eggs",
@@ -44,9 +46,9 @@ function foodService($http) {
     ];
 
   let locations = [
-    {name: "Home", foodSize: 6},
-    {name: "Gas Station", foodSize: 8},
-    {name: "Super Market", foodSize: 10}
+    {name: "Home", foodSize: 6, img: "/img/home.jpg"},
+    {name: "Gas Station", foodSize: 8, img: "/img/gas-station.jpg"},
+    {name: "Super Market", foodSize: 10, img: "/img/super-market.jpg"}
     ];
 
   const getFoodItems = (foodDatabase) => {
@@ -68,12 +70,48 @@ function foodService($http) {
     return finalFoodDetails;
   };
 
-  const randomizeFoods = () => {
-    
+  const randomizeFoods = (page) => {
+    for (let i = 0; i < locations[page].foodsize; i++) {
+      foodsAtLocation.push(foodWordlist[Math.floor(Math.random() * foodWordlist.length)]);
+    }
+    return foodsAtLocation;
+  }
+
+  const getBagItems = () => {
+    return bugOutBag;
+  }
+
+  const addBagItem = (newItem) => {
+    bugOutBag.push(newItem);
+    return bugOutBag;
+  }
+  
+  const moveBagItemToLocation = (index) => {
+    tempLocationItems.push(bugOutBag[index]);
+    bugOutBag.splice(index, 1);
+    return {
+      locations: tempLocationItems,
+      bag: bugOutBag
+    }
+  }
+
+  const moveLocationItemToBag = (index) => {
+    bugOutBag.push(tempLocationItems[index]);
+    tempLocationItems.splice(index, 1);
+    return {
+      locations: tempLocationItems,
+      bag: bugOutBag
+    }
   }
 
   return {
-    getFoodItems
+    getFoodItems,
+    randomizeFoods,
+    getBagItems,
+    addBagItem,
+    randomizeFoods,
+    moveBagItemToLocation,
+    moveLocationItemToBag
   };
 }
 

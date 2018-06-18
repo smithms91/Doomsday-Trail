@@ -1,0 +1,39 @@
+<form>
+    <div class="logo">
+      <img class="logo_header" src="logo.png" alt="">
+      <h1 class="stat_header">Enter your stats</h1>
+    </div>
+
+    <div class="age_height">
+      <div class="age">
+        <label class="info_label">Age:</label>
+        <input class="age_input" id="age" type="number" oninput="calsPerDay()" value="27">
+      </div>
+      <div class="height">
+        <label class="info_label">Height:</label>
+        <input class="height_input" id="height" type="number" oninput="calsPerDay()" value="70">
+      </div>
+    </div>
+
+    <div class="male_female">
+      <div class="male">
+        <label class="info_label">Male:</label>
+        <input class="radio_sex" id="male" type="radio" name="gender" onchange="calsPerDay()" checked>
+      </div>
+      <div class="female">
+        <label class="info_label">Female:</label>
+        <input class="radio_sex" id="female" type="radio" name="gender" onchange="calsPerDay()">
+      </div>
+    </div>
+
+    <div class="weight">
+      <label class="info_label">Weight:</label>
+      <input class="weight_input" id="weight" type="number" oninput="calsPerDay()" value="225">
+    </div>
+
+    <label class="cal_info" onclick="calsPerDay">
+      Base metabolic rate: <span id="totalCals"></span> kcal per day
+    </label>
+
+    <button type="button" class="go_button" onclick="logCals()">Go!</button>
+  </form>

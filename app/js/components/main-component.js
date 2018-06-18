@@ -1,6 +1,7 @@
 "use strict";
 
 const mainComponent = {
+    // templateUrl: "../templates/landing-page.template.html",
     template: `
         <button ng-click="$ctrl.nextPage();">Bug Out</button>
         <div ng-repeat="food in $ctrl.foodResult">
@@ -21,7 +22,7 @@ const mainComponent = {
             $location.path("/second-component");
         }
 
-        vm.getRandomFoods = () => {
+        vm.getRandomFoods = (page) => {
           
         }
     }]
