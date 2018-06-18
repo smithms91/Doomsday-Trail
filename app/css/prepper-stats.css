@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Impact", sans-serif;
+    text-align: center;
+    position: relative;
+    background-image: url(mobile_bg.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.logo_header {
+    margin-right: 2rem;
+}
+
+input {
+    margin-left: 10px;
+}
+
+.stat_header {
+    margin-bottom: 2rem;
+}
+
+.info_label {
+    display: inline-block;
+}
+
+.age_height {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.age_input {
+    width: 35px;
+    display: inline-block;
+}
+
+.height_input {
+    width: 35px;
+}
+
+.male_female {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3rem 0;
+}
+
+.cal_info {
+    display: block;
+    margin: 3rem 0;
+}
+
+.weight_input {
+    width: 50px;
+    bottom: 0;
+    position: relative;;
+}
+
+.go_button {
+    width: 25%;
+    margin: 0 auto;
+    padding: .5rem;
+    background-image: linear-gradient(rgba(200, 100, 100, .5), rgba(150, 200, 50, .75));
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+/* .radio_sex {
+    background-color: red;
+}
+
+.sex_label {
+    box-shadow: 0.1em 0.1em 0.2em #888;
+    margin: 1em;
+    border-radius: 1ex;
+    padding: 1ex 1em;
+} */
+
+/* 
+label {
+    display: inline-block;
+    width: 100px;
+    box-shadow: 0.1em 0.1em 0.2em #888;
+    margin: 1em;
+    border-radius: 1ex;
+    padding: 1em 1em;
+  }
+input[type=number] {
+    text-align: right;
+    border: none;
+}
+input {
+    float: right;
+}
+span {
+    font-weight: bold;
+} */

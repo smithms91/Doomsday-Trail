@@ -1,14 +1,14 @@
 "use strict";
 
 angular
-  .module("app", ["ngRoute"])
+  .module("app", ["ngRoute", "ui.bootstrap"])
   .config(($routeProvider) => {
     $routeProvider
       .when("/main-component", {
         template: `<main-component></main-component>`
       })
-      .when("/second-component", {
-        template: `<second-component></second-component>`
+      .when("/prepper-stats-component", {
+        template: `<prepper-stats-component></prepper-stats-component>`
       })
       .otherwise({ redirectTo: "/main-component"});
   });

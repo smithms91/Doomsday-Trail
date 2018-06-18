@@ -1,0 +1,27 @@
+
+/* Logo Glow */
+
+.nav-logo {
+    animation: glow 3s infinite;
+}
+
+
+
+@keyframes glow {
+    0% {
+      box-shadow:  0 0 10px white;
+    }
+    
+    15% {
+      box-shadow: 2px 2px 10px rgb(222, 240, 63),
+                   -2px -2px 10px rgb(222, 240, 63);
+    }
+    30% {
+      box-shadow: 2px 2px 4px rgba(234, 236, 99, 0.7),
+                   -2px -2px 4px rgba(234, 236, 99, 0.7);
+    }
+    50% {
+      box-shadow: 20px 20px 50px rgba(234, 236, 115, 0.5),
+                   -20px -20px 50px rgba(234, 236, 115, 0.5);
+    }
+  }
