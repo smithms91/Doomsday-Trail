@@ -5,8 +5,6 @@ const aboutComponent = {
     controller: ["foodService", "$location", function(foodService, $location) {
         const vm = this;
 
-
-
     }]
 }
 

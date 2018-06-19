@@ -5,43 +5,43 @@ function foodService($http) {
   let bugOutBag = [];
   let foodsAtLocation = [];
   let foodWordlist = [
-    "Cheese",
-    "Eggs",
-    "Milk",
-    "Bananas",
-    "Cereal",
-    "Chicken", 
-    "Canned food - soup",
-    "Marshmallows",
-    "Apple",
-    "Banana",
-    "Onion",
-    "Potato",
-    "Canned Food - Beans",
-    "Tomatoes",
-    "Peanut Butter",
-    "Tub of Lard",
-    "Pop",
-    "Candy Bar",
-    "Oranges",
-    "Loaf of Bread",
-    "Rice",
-    "Canned Food - Tuna",
-    "Canned Food - Tomato Sauce",
-    "Instant Ramen",
-    "Hot Dogs",
-    "Pretzels",
-    "Bag of Peanuts",
-    "Bag of Almonds",
-    "Trail Mix",
-    "Beef Jerky Bag",
-    "Carrots",
-    "Twinkies",
-    "Chips",
-    "Cucumbers",
-    "Popcorn",
-    "Celery",
-    "Avocado",
+    // "Cheese",
+    // "Eggs",
+    // "Milk",
+    // "Bananas",
+    // "Cereal",
+    // "Chicken", 
+    // "Canned food - soup",
+    // "Marshmallows",
+    // "Apple",
+    // "Banana",
+    // "Onion",
+    // "Potato",
+    // "Canned Food - Beans",
+    // "Tomatoes",
+    // "Peanut Butter",
+    // "Tub of Lard",
+    // "Pop",
+    // "Candy Bar",
+    // "Oranges",
+    // "Loaf of Bread",
+    // "Rice",
+    // "Canned Food - Tuna",
+    // "Canned Food - Tomato Sauce",
+    // "Instant Ramen",
+    // "Hot Dogs",
+    // "Pretzels",
+    // "Bag of Peanuts",
+    // "Bag of Almonds",
+    // "Trail Mix",
+    // "Beef Jerky Bag",
+    // "Carrots",
+    // "Twinkies",
+    // "Chips",
+    // "Cucumbers",
+    // "Popcorn",
+    // "Celery",
+    // "Avocado",
     "Broccoli"
     ];
 
@@ -51,23 +51,37 @@ function foodService($http) {
     {name: "Super Market", foodSize: 10, img: "/img/super-market.jpg"}
     ];
 
-  const getFoodItems = (foodDatabase) => {
-    for (let i = 0; i < foodDatabase.length; i++) {
-      $http({
-            method: "GET",
-            url: `https://trackapi.nutritionix.com/v2/search/instant?query=${foodDatabase}`,
-            headers: {
-              'Content-Type':'application/json', 
-              'x-app-id':'41610192', 
-              'x-app-key':'13bc79b7f7a28a177da940ede4565591'
-          }
+  const getFoodItems = () => {
+    for (let i = 0; i < foodWordlist.length; i++) {
+      $http.post('https://trackapi.nutritionix.com/v2/natural/nutrients', 
+        { 'query': `${foodWordlist[i]}`,
+          // 'query': 'cheese',
+          'timezone': 'US/Eastern'
+        },        
+        { headers: {
+          'Content-Type':'application/json', 
+            // TONY ID 41610192
+          'x-app-id':'182d0921', 
+          'x-app-key':'b2570b50f16f5c4d418dec4629a97a97'
+        }
       }).then((response) => {
-        finalFoodDetails.push(response.data);
+        console.log(response);
+        finalFoodDetails.push(response);
       });
-
     }
     console.log(finalFoodDetails);
     return finalFoodDetails;
+  };
+
+  
+
+  const addFoodItemsToDB = (fooditem) => {
+      console.log(fooditem);
+      return $http({
+        method: "POST",
+        url: "/portal/storedata",
+        data: fooditem
+      });  
   };
 
   const randomizeFoods = (page) => {
@@ -107,6 +121,7 @@ function foodService($http) {
   return {
     getFoodItems,
     randomizeFoods,
+    addFoodItemsToDB,
     getBagItems,
     addBagItem,
     randomizeFoods,
@@ -159,3 +174,4 @@ angular
     //     console.log(response.data);
     //     return response.data;
     // });
+

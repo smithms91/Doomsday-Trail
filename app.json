@@ -1,5 +1,5 @@
 {
-  "name" : "NAME OF YOUR APP", 
-  "description" : "PROJECT DESCRIPTION", 
+  "name" : "doomsday-trail", 
+  "description" : "Doomsday Trail", 
   "image" : "heroku/nodejs"
 }

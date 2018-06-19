@@ -1,7 +1,7 @@
 "use strict";
 
 angular
-  .module("app", ["ngRoute", "ui.bootstrap"])
+  .module("app", ["ngRoute"])
   .config(($routeProvider) => {
     $routeProvider
       .when("/main-component", {
@@ -12,3 +12,5 @@ angular
       })
       .otherwise({ redirectTo: "/main-component"});
   });
+
+  //"ui.bootstrap"
