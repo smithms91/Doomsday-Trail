@@ -1,0 +1,14 @@
+"use strict";
+
+const pg = require("pg");
+
+let pool = new pg.Pool({
+    user: "",
+    password: "",
+    host: "localhost",
+    port: 5432,
+    database: "postgres",
+    ssl: false
+});
+
+module.exports = pool;

@@ -20,7 +20,8 @@
   "dependencies": {
     "@ng-bootstrap/ng-bootstrap": "^2.1.1",
     "express": "^4.16.3",
-    "pg": "^7.4.3"
+    "pg": "^7.4.3",
+    "simple-get": "^3.0.2"
   },
   "devDependencies": {
     "gulp": "^3.9.1"
