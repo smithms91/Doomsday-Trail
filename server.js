@@ -5,8 +5,15 @@ const app = express();
 const bodyParser = require("body-parser");
 const mainRoute = require("./routes/main-route");
 
-app.use("/portal", mainRoute);
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+}));
+// app.use(express.urlencoded()); // to support URL-encoded bodies
+
+
+
+app.use("/portal", mainRoute);
 app.use(express.static(__dirname + "/app"));
 
 const port = process.env.PORT || 3000;

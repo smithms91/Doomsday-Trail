@@ -4,44 +4,45 @@ function foodService($http) {
   let finalFoodDetails = [];
   let bugOutBag = [];
   let foodsAtLocation = [];
+  
   let foodWordlist = [
-    // "Cheese",
-    // "Eggs",
-    // "Milk",
-    // "Bananas",
-    // "Cereal",
-    // "Chicken", 
-    // "Canned food - soup",
-    // "Marshmallows",
-    // "Apple",
-    // "Banana",
-    // "Onion",
-    // "Potato",
-    // "Canned Food - Beans",
-    // "Tomatoes",
-    // "Peanut Butter",
-    // "Tub of Lard",
-    // "Pop",
-    // "Candy Bar",
-    // "Oranges",
-    // "Loaf of Bread",
-    // "Rice",
-    // "Canned Food - Tuna",
-    // "Canned Food - Tomato Sauce",
-    // "Instant Ramen",
-    // "Hot Dogs",
-    // "Pretzels",
-    // "Bag of Peanuts",
-    // "Bag of Almonds",
-    // "Trail Mix",
-    // "Beef Jerky Bag",
-    // "Carrots",
-    // "Twinkies",
-    // "Chips",
-    // "Cucumbers",
-    // "Popcorn",
-    // "Celery",
-    // "Avocado",
+    "Cheese",
+    "Eggs",
+    "Milk",
+    "Bananas",
+    "Cereal",
+    "Chicken", 
+    "Canned food - soup",
+    "Marshmallows",
+    "Apple",
+    "Banana",
+    "Onion",
+    "Potato",
+    "Canned Food - Beans",
+    "Tomatoes",
+    "Peanut Butter",
+    "Tub of Lard",
+    "Pop",
+    "Candy Bar",
+    "Oranges",
+    "Loaf of Bread",
+    "Rice",
+    "Canned Food - Tuna",
+    "Canned Food - Tomato Sauce",
+    "Instant Ramen",
+    "Hot Dogs",
+    "Pretzels",
+    "Bag of Peanuts",
+    "Bag of Almonds",
+    "Trail Mix",
+    "Beef Jerky Bag",
+    "Carrots",
+    "Twinkies",
+    "Chips",
+    "Cucumbers",
+    "Popcorn",
+    "Celery",
+    "Avocado",
     "Broccoli"
     ];
 
@@ -69,8 +70,12 @@ function foodService($http) {
         finalFoodDetails.push(response);
       });
     }
-    console.log(finalFoodDetails);
     return finalFoodDetails;
+
+    // return $http({
+    //   method: "GET",
+    //   url: "/portal/storedata"
+    // });
   };
 
   
@@ -135,32 +140,8 @@ angular
   .factory("foodService", foodService);
 
 
-    // FOR NOW, COMMENT THIS OUT, IN CASE WE USE A DATABASE
-  // const addStudent = (newStudent) => {
-  //   return $http({
-  //     method: "POST",
-  //     url: "/portal/students",
-  //     data: newStudent  
-  //   })
-  // };
-
-  // const deleteStudent = (id) => {
-  //   return $http({
-  //     method: "DELETE",
-  //     url: "/portal/students/" + id
-  //   });
-  // };
-
-  // const updateStudent = (student) => {
-  //   return $http({
-  //     method: "PUT",
-  //     url: "/portal/students/" + student.id,
-  //     data: student
-  //   });
-  // };
 
 
-    // 
 
     // return $http({
     //   method: "GET",
@@ -175,3 +156,24 @@ angular
     //     return response.data;
     // });
 
+
+    // THIS CODE IS FOR ADDING ITEMS. WE CAN SET UP THE ARRAY WITH NEW FOODS AND USE THIS TO
+    // CALL THE API AND STORE MORE DATA TO OUR DATABASE.
+    // for (let i = 0; i < foodWordlist.length; i++) {
+    //   $http.post('https://trackapi.nutritionix.com/v2/natural/nutrients', 
+    //     { 'query': `${foodWordlist[i]}`,
+    //       // 'query': 'cheese',
+    //       'timezone': 'US/Eastern'
+    //     },        
+    //     { headers: {
+    //       'Content-Type':'application/json', 
+    //         // TONY ID 41610192
+    //       'x-app-id':'182d0921', 
+    //       'x-app-key':'b2570b50f16f5c4d418dec4629a97a97'
+    //     }
+    //   }).then((response) => {
+    //     console.log(response);
+    //     finalFoodDetails.push(response);
+    //   });
+    // }
+    // return finalFoodDetails;
