@@ -4,7 +4,9 @@ function foodService($http) {
   let foodDatabaseItems = [];
   let bugOutBag = [];
   let foodsAtLocation = [];
-  let count = 0;
+  let count = 2;
+  let bagSize = 6;
+  let user = {};
   
   let locations = [
     {
@@ -12,7 +14,7 @@ function foodService($http) {
       foodSize: 6,
       img: "/img/home.jpg",
       intro_message: "Doomsday has arrived. Major cities have been hit by electromagnetic pulse bombs, and shut off the grid. The world is dark, and people are losing their minds. You look out the window at the carnage ensuing, and realize there is an angry mob of people coming towards your house! You have a short amount of time to look through your pantry and grab whatever you need to survive for as long as you can.",
-      timer: 20000,
+      timer: 10,
       timermessage: "The front door busts open and several rioters crash through. Realizing you are out of time, you make a break for your backdoor with whatever items you might have grabbed."
     },
     {
@@ -20,7 +22,7 @@ function foodService($http) {
       foodSize: 8,
       img: "/img/gas-station.jpg",
       message: "You just found this gas station... it is pretty picked over but lets see what you can use. You have 15 seconds to get in and get out.",
-      timer: 20000,
+      timer: 8,
       timerMessage: "You have to go! Take what you have on you and make a run for it!"
     },
     {
@@ -28,7 +30,7 @@ function foodService($http) {
       foodSize: 10, 
       img: "/img/super-market.jpg",
       message: "You made it to the Super Market! Thankfully there are some supplies left. Make quick decisions and GTF out",
-      timer: 20000,
+      timer: 6,
       timerMessage: "Time is out! You have to get to Adam's bunker now! Hopefully you made good choice of whats in your bag."
       }
     ];
@@ -42,6 +44,7 @@ function foodService($http) {
       console.log(foodDatabaseItems);
     });
   };
+
 // call returnFoodItems from any component
   const returnFoodItems = () => {
     return foodDatabaseItems;
@@ -62,11 +65,6 @@ function foodService($http) {
     return bugOutBag;
   }
 
-  const addBagItem = (newItem) => {
-    bugOutBag.push(newItem);
-    return bugOutBag;
-  }
-  
   const moveBagItemToLocation = (index) => {
     foodsAtLocation.push(bugOutBag[index]);
     bugOutBag.splice(index, 1);
@@ -77,11 +75,20 @@ function foodService($http) {
   }
 
   const moveLocationItemToBag = (index) => {
-    bugOutBag.push(foodsAtLocation[index]);
-    foodsAtLocation.splice(index, 1);
-    return {
-      locations: foodsAtLocation,
-      bag: bugOutBag
+    console.log("clicked");
+    if ( bugOutBag.length < bagSize ){
+      bugOutBag.push(foodsAtLocation[index]);
+      foodsAtLocation.splice(index, 1);
+      return {
+        locations: foodsAtLocation,
+        bag: bugOutBag
+      }
+    } else {
+      alert("No more room in your bag fool");
+      return {
+        locations: foodsAtLocation,
+        bag: bugOutBag
+      }
     }
   }
 
@@ -93,18 +100,32 @@ function foodService($http) {
     return count++;
   }
   
+  const resetLocation = () => {
+    foodsAtLocation = [];
+    count++;
+  }
+
+const pushUserStats = (userStats) => {
+  user = userStats;
+}
+
+const getUserStats = () => {
+  return user;
+}
+
   return {
     returnFoodItems,
     getFoodItemsFromDB,
     randomizeFoods,
     getBagItems,
-    addBagItem,
     randomizeFoods,
     moveBagItemToLocation,
     moveLocationItemToBag,
     returnLocations,
     returnCount,
-    incrementCount
+    incrementCount,
+    resetLocation,
+    pushUserStats
   };
 }
 

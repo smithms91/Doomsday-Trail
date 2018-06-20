@@ -7,8 +7,6 @@
     <div class="landing_button_container">
         <button class="landing_buttons" type="button" ng-click="$ctrl.aboutGame();">About</button>
         <button class="landing_buttons" type="button" ng-click="$ctrl.nextPage();">Play</button>
-        <button class="landing_buttons" type="button" ng-click="$ctrl.makeTheCall();">Make the call.</button>
-        <button class="landing_buttons" type="button" ng-click="$ctrl.pushToDB($ctrl.tempFoodArray);">Push to DB.</button>
     </div>
 
 </section>
@@ -17,5 +15,5 @@
 <section class="popup" ng-show="$ctrl.popup">
     <h1>Doomsday Trail</h1>
     <p>Doomsday Trail is a game based on the game Oregon Trail. During an apocolypse you need to grab food items to survive. Find out how long you will survive, if it all, by playing Doomsday Trail.</p>
-    <i class="material-icons close">clear</i>
+    <i class="material-icons close" ng-click="$ctrl.close();">clear</i>
 </section>

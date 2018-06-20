@@ -1,15 +1,21 @@
 <nav-component></nav-component>
-<h1>{{ $ctrl.header }}</h1>
+<h1>{{ $ctrl.currentLocation[$ctrl.counter].name }}</h1>
 
-<section class="food-choices">
-    <div class="item_box" ng-repeat="food in $ctrl.locationItems">
-        <img ng-src="{{ food.img }}">
-        <p>{{ food.name }}</p> <!-- show on hover-->
+<section class="food-choices-container">
+    <div class="item_box" ng-repeat="food in $ctrl.locationItems track by $index" ng-click="$ctrl.moveToBag($index)">
+        <img class="food_img" ng-src="{{ food.img }}">
+        <p>{{ food.food_name }}</p> <!-- show on hover-->
     </div>
+    
+    <section class="bag-container">
+        <div class="bug-out-bag" ng-repeat="item in $ctrl.bagItems track by $index" ng-click="$ctrl.moveToLocation($index)">
+            <img class="food_img" ng-src="{{ item.img }}">
+            <p>{{ item.food_name }}</p> 
+        </div>
+    </section>
 </section>
-
-<section class="bag-container">
-    <div class="bug-out-bag">
-
-    </div>
-</section>
+    
+<footer>
+    <div class="man" style="{{$ctrl.timerAnimation}}"></div>
+    <button class="bug_out_btn" ng-click="$ctrl.moveToNextLocation();">Bug Out!</button>
+</footer>

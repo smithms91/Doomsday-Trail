@@ -14,6 +14,10 @@ const landingPageComponent = {
         // }
         // console.log(vm.foodArray);
 
+        vm.close = () => {
+            vm.popup = false;
+        }
+
         vm.nextPage = () => {
             $location.path("/prepper-stats-component");
         };
