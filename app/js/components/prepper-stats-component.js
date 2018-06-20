@@ -1,12 +1,15 @@
 "use strict";
-console.log("prepper stats component connected")
+console.log("prepper stats component connected");
 const prepperStatsComponent = {
     
     templateUrl: `../templates/prepper-stats.template.html`,
     controller: ["foodService", "$location", function(foodService, $location) {
         const vm = this;
+
         vm.result = 0;
+        vm.items = foodService.returnFoodItems();
         
+        console.log(vm.items);
         vm.calsPerDay = () => {
           console.log("testing");
 
@@ -19,7 +22,9 @@ const prepperStatsComponent = {
             }
             console.log(vm.sex);
             console.log(vm.result);
-          }
+        }
+
+        
     }]
 }
 

@@ -1,7 +1,7 @@
 "use strict";
 
 const aboutComponent = {
-    templateUrl: `../templates/nav.template.html`,
+    templateUrl: `../templates/about.template.html`,
     controller: ["foodService", "$location", function(foodService, $location) {
         const vm = this;
 

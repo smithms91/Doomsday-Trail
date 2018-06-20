@@ -1,0 +1,15 @@
+<nav-component></nav-component>
+<h1>{{ $ctrl.header }}</h1>
+
+<section class="food-choices">
+    <div class="item_box" ng-repeat="food in $ctrl.locationItems">
+        <img ng-src="{{ food.img }}">
+        <p>{{ food.name }}</p> <!-- show on hover-->
+    </div>
+</section>
+
+<section class="bag-container">
+    <div class="bug-out-bag">
+
+    </div>
+</section>
