@@ -25,8 +25,7 @@ const prepperStatsComponent = {
 
         vm.nextPage = (user) => {
             foodService.pushUserStats(user);
-            $location.path("/location-component");
-            alert(vm.currentLocation[vm.counter].intro_message);
+            $location.path("/story-component");
         }
     }]
 }

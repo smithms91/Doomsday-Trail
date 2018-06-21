@@ -5,7 +5,9 @@ const navComponent = {
     controller: ["foodService", "$location", function(foodService, $location) {
         const vm = this;
 
-
+        vm.resetGame = () => {
+            foodService.resetCount();
+        }
 
     }]
 }

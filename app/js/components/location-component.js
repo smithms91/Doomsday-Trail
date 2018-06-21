@@ -5,45 +5,48 @@ const locationComponent = {
   controller: ["foodService", "$location", "$route", function(foodService, $location, $route) {
       const vm = this;
       vm.currentLocation = foodService.returnLocations();
-      vm.locationItems = foodService.randomizeFoods(foodService.returnCount());
-      vm.bagItems = foodService.getBagItems();
       vm.counter = foodService.returnCount();
+      vm.locationItems = foodService.randomizeFoods(vm.counter);
+      vm.bagItems = foodService.getBagItems();
 
       // THIS IS WHEN ANIMATION ENDS DO SOMETHING 
-      vm.man = document.querySelector(".man");
-      vm.man.addEventListener("animationend", () => {
-        vm.man.style.display = "none";
-        vm.moveToNextLocation();
-      });
-
-      console.log(vm.locationItems);
-      console.log(vm.bagItems);
-
-      vm.putItemInBag = () => {
-        //Take item from locationItems and put it in the Bag
-      }
-
-      vm.putItemBack = () => {
-        //Take item from the bag and put it back into the locationItems
-      }
+      // vm.man = document.querySelector(".man_box");
+      // vm.man.addEventListener("animationend", () => {
+      //   $location.path("/story-component");
+      //   foodService.resetLocation();
+      //   vm.man.style.display = "none";
+      //   // vm.moveToNextLocation();
+      // });
 
       vm.moveToBag = (index) => {
-        vm.bagItems = foodService.moveLocationItemToBag(index).bag;
+        foodService.moveLocationItemToBag(index).bag;
+        // vm.bagItems = foodService.moveLocationItemToBag(index).bag;
       }
 
       vm.moveToLocation = (index) => {
-        vm.locationItems = foodService.moveBagItemToLocation(index).locations;
+        foodService.moveBagItemToLocation(index).locations;
+        // vm.locationItems = foodService.moveBagItemToLocation(index).locations;
       }
 
       vm.moveToNextLocation = () => {
         foodService.resetLocation();
-        $route.reload();
-        alert(vm.currentLocation[vm.counter].intro_message);
+        clearTimeout(pageTimeout);
+        if ( vm.counter < vm.currentLocation.length - 1) {
+          console.log(vm.counter);
+          $route.reload();
+          $location.path("/story-component");
+
+       } else if (vm.counter >= vm.currentLocation.length - 1) {
+          console.log(vm.counter);
+          $route.reload();
+          $location.path("/end-component");
+        } 
         // vm.onPageReload();
         //WE SEND THE PLAYER TO THE FINAL PAGE
       }
 
-      vm.timerAnimation = `background:url(../img/running_man8.png);width:128px;height:150px;animation:walk-east 1s steps(8) infinite, forward ${vm.currentLocation[vm.counter].timer}s linear;`;
+      vm.timerAnimation = `animation:forward ${vm.currentLocation[vm.counter].timer}s linear;`;
+      let pageTimeout = setTimeout(vm.moveToNextLocation, vm.currentLocation[vm.counter].timer * 1000);
   }]
 };
 

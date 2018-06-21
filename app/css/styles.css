@@ -1,4 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
 
+body {
+  height: 100vh;
+  overflow-x: hidden;
+}
 /* Logo Glow */
 
 .nav-logo {
@@ -81,11 +90,83 @@
   animation: walk-east 1s steps(8) infinite,
               forward 10s linear infinite;
 } */
+
+.man {
+  background:url(../img/running_man8.png);
+  width: 128px;
+  height: 165px;
+  animation: walk-east 1s steps(8) infinite;
+}
+
 @keyframes walk-east {
 from { background-position: 0px; }  
   to { background-position: -1024px; }
 }
 @keyframes forward {
-  from { transform: translateX(-100px); }  
-  to { transform: translateX(1916px); }  
+  from { transform: translateX(0%); }  
+  to { transform: translateX(100%); }  
+}
+
+/* Story Bubble */
+.talk-bubble {
+    margin: 40px;
+  display: inline-block;
+  position: relative;
+    width: 40%;
+    height: auto;
+    background-color: lightyellow;
+  border: 8px solid #666;
+  border-radius: 30px;
+  top: 25%;
+}
+/* Top Half of Bubble */
+.bubble:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 30px;
+  right: auto;
+  top: auto;
+    bottom: -40px;
+    border: 20px solid;
+  border-color: #666 transparent transparent #666;
+}
+/* Bottom Part of Bubble */
+.bubble:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 38px;
+    right: auto;
+    top: auto;
+    bottom: -20px;
+    border: 12px solid;
+    border-color: lightyellow transparent transparent lightyellow;
+}
+.talktext{
+  padding: 1em;
+    text-align: left;
+  line-height: 1.5em;
+}
+.click {
+  display: inline-block;
+  position: relative;
+  top: 6px;
+  right: -4px;
+  border-radius: 100%;
+  background-color: white;
+}
+.text {
+  display: inline;
+}
+.button-glow {
+  animation: glowing 5000ms infinite;
+}
+@keyframes glowing {
+  0% { box-shadow: 0 0 -10px #c4a300; }
+  40% { box-shadow: 0 0 20px #c4a300; }
+  60% { box-shadow: 0 0 20px #c4a300; }
+  100% { box-shadow: 0 0 -10px #c4a300; }
 }

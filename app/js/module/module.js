@@ -13,6 +13,12 @@ angular
       .when("/location-component", {
         template: `<location-component></location-component>`
       })
+      .when("/story-component", {
+        template: `<story-component></story-component>`
+      })
+      .when("/end-component", {
+        template: `<end-component></end-component>`
+      })
       .otherwise({ redirectTo: "/landing-page-component"});
   });
 

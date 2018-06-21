@@ -6,6 +6,7 @@ const landingPageComponent = {
     controller: ["foodService", "$location", function(foodService, $location) {
         const vm = this;
         foodService.getFoodItemsFromDB();
+        
 
         vm.popup = false;
         vm.tempFoodArray;
