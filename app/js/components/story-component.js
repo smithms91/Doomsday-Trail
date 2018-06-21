@@ -10,13 +10,13 @@ const storyComponent = {
         vm.nextPage = () => {
             $location.path("/location-component");
         }
-
-        let i = 0;
-        let txt = `Get ready! You have 15 seconds to grab 3 items. Choose wisely as the more calories in each food the better chance you have of survival.`; /* The text */
-        let speed = 50; /* The speed/duration of the effect in milliseconds */
-        let button = document.querySelector(".click");
        
         document.querySelector(".text").innerHTML = vm.message[vm.counter].message;
+
+        // let i = 0;
+        // let txt = `Get ready! You have 15 seconds to grab 3 items. Choose wisely as the more calories in each food the better chance you have of survival.`; /* The text */
+        // let speed = 50; /* The speed/duration of the effect in milliseconds */
+        // let button = document.querySelector(".click");
 
         // function typeWriter() {
         //   if (i < txt.length) {

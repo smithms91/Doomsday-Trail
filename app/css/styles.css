@@ -2,17 +2,63 @@
   margin: 0;
   padding: 0;
   outline: none;
+  box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
+  background-image: url("../img/night-full.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Impact", sans-serif;
+  text-align: center;
+  color: white;
+}
+
+ng-view {
+  width: 100%;
+  height: 100vh;
+}
+
+.nav {
+  width: 100vw;
 }
 /* Logo Glow */
 
 .nav-logo {
     animation: glow 3s infinite;
 }
+
+/*buttons*/
+
+.landing_button_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.landing_buttons {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 20px;
+  width: 20%;
+  font-size: 20px;
+ }
+
+/* User stats*/
+
+.num_input{ 
+  width: 75px;  
+}
+
 /*About Popup*/
 .popup {
   width: 300px;
@@ -20,7 +66,9 @@ body {
   height: 300px;
   position: fixed;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
 }
 
 .close {
@@ -30,25 +78,40 @@ body {
 }
 
 .item_box {
-  width: 100px;
-  height: 100%;
-  margin: 1rem;
-  border: 1px solid teal;
+  background-color: grey;
+  width: 75px;
+  height: 75px;
+  margin: 10px;
+}
+
+.bug-out-bag {
+  background-color: red;
+  width: 75px;
+  height: 75px;
+  margin: 10px;
 }
 
 /*Bag Containers */
 .bag-container {
+  width: 75%;
   display: flex;
-  background-color: orange;
-  border: 1px solid grey;
-  width: 50%;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: lightblue;
 }
 
-.food-choices-container {
+.food-container {
+  width: 75%;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: lightblue;
 }
+
 .food-choices {
   margin: 0 auto 20px auto;
   /* display: flex; */
@@ -59,9 +122,23 @@ body {
   flex-wrap: wrap;
 }
 
+.final_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
 .food_img {
-  width: 100%;
-  height: 50px;
+  width: 100px;
+  height: 100px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
 @keyframes glow {
@@ -109,27 +186,33 @@ from { background-position: 0px; }
 
 /* Story Bubble */
 .talk-bubble {
-    margin: 40px;
+  margin: 40px;
   display: inline-block;
   position: relative;
-    width: 40%;
-    height: auto;
-    background-color: lightyellow;
+  width: 40%;
+  height: auto;
+  background-color: lightyellow;
   border: 8px solid #666;
   border-radius: 30px;
   top: 25%;
 }
+
+.bubble {
+  transition: all 3s;
+  animation: slideUp;
+}
+
 /* Top Half of Bubble */
 .bubble:before {
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: 30px;
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 30px;
   right: auto;
   top: auto;
-    bottom: -40px;
-    border: 20px solid;
+  bottom: -40px;
+  border: 20px solid;
   border-color: #666 transparent transparent #666;
 }
 /* Bottom Part of Bubble */
@@ -145,11 +228,13 @@ from { background-position: 0px; }
     border: 12px solid;
     border-color: lightyellow transparent transparent lightyellow;
 }
+
 .talktext{
   padding: 1em;
-    text-align: left;
+  text-align: left;
   line-height: 1.5em;
 }
+
 .click {
   display: inline-block;
   position: relative;
@@ -160,6 +245,15 @@ from { background-position: 0px; }
 }
 .text {
   display: inline;
+  color: black;
+}
+
+.center {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .button-glow {
   animation: glowing 5000ms infinite;
@@ -169,4 +263,13 @@ from { background-position: 0px; }
   40% { box-shadow: 0 0 20px #c4a300; }
   60% { box-shadow: 0 0 20px #c4a300; }
   100% { box-shadow: 0 0 -10px #c4a300; }
+}
+
+@media only screen and (max-width: 600px){
+  body {
+      background-image: url("../img/night-mobile.jpg");
+      background-attachment: fixed;
+      background-size: cover;
+      height: 100vh;
+  }
 }

@@ -1,17 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Impact", sans-serif;
-    text-align: center;
-    position: relative;
-    background-image: url(mobile_bg.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
 form {
     height: 100%;
     display: flex;
@@ -44,16 +30,19 @@ input {
 
 .age_height {
     display: flex;
+    padding: 10px;
     justify-content: space-evenly;
 }
 
 .age_input {
-    width: 35px;
+    padding: 10px;
+    width: 60px;
     display: inline-block;
 }
 
 .height_input {
-    width: 35px;
+    padding: 10px;
+    width: 60px;
 }
 
 .male_female {
@@ -68,7 +57,7 @@ input {
 }
 
 .weight_input {
-    width: 50px;
+    width: 60px;
     bottom: 0;
     position: relative;;
 }

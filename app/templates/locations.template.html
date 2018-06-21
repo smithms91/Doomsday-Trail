@@ -1,20 +1,23 @@
 <nav-component></nav-component>
 <h1>{{ $ctrl.currentLocation[$ctrl.counter].name }}</h1>
-
-<section class="food-choices-container">
-    <div class="item_box" ng-repeat="food in $ctrl.locationItems track by $index" ng-click="$ctrl.moveToBag($index)">
-        <img class="food_img" ng-src="{{ food.img }}">
-        <p>{{ food.food_name }}</p> <!-- show on hover-->
-    </div>
-    
+<div class="center">
+    <h2>Items To Pick From</h2>
+    <section class="food-container">
+        <div class="item_box" ng-repeat="food in $ctrl.locationItems track by $index" ng-click="$ctrl.moveToBag($index)">
+            <img class="food_img" ng-src="{{ food.img }}">
+            <p>{{ food.food_name }}</p> <!-- show on hover-->
+        </div>
+    </section>
+        
+    <h2>Your Items</h2>
     <section class="bag-container">
         <div class="bug-out-bag" ng-repeat="item in $ctrl.bagItems track by $index" ng-click="$ctrl.moveToLocation($index)">
             <img class="food_img" ng-src="{{ item.img }}">
             <p>{{ item.food_name }}</p> 
         </div>
     </section>
-</section>
-    
+</div>
+        
 <footer>
     <div class="man_box" style="{{$ctrl.timerAnimation}}">
         <div class="man"></div>

@@ -21,17 +21,17 @@ function foodService($http) {
       name: "Gas Station",
       foodSize: 8,
       img: "/img/gas-station.jpg",
-      message: "You just found this gas station... it is pretty picked over but lets see what you can use. You have 15 seconds to get in and get out.",
+      message: "You escape down the street from your home, passing disabled cars all around you. You walk for an hour, before finally come across the nearest gas station. It already looks pretty picked over but you take cover within as you hear gun shots in the distance. They sound like they are getting closer.",
       timer: 15,
-      timerMessage: "You have to go! Take what you have on you and make a run for it!"
+      timerMessage: "The glass shatters, and bullets rip through the wall behind you. You see several people attacking each other and decide in your best interests to make a break for it."
     },
     {
-      name: "Super Market", 
+      name: "Supermarket", 
       foodSize: 10, 
       img: "/img/super-market.jpg",
-      message: "You made it to the Super Market! Thankfully there are some supplies left. Make quick decisions and GTF out",
+      message: "You feel you have been aimlessly running, not even aware of where you are anymore. By some subconscious decision, you find yourself at the supermarket, where glass has been broken out, destroyed baskets litter the parking lot, and a darkness blankets the inside. Several lone people scatter from various openings, and the sounds of a distant uproar seem to be approaching fast. Perhaps there is something inside that you can take with you before the inevitable arrives.",
       timer: 10,
-      timerMessage: "Time is out! You have to get to Adam's bunker now! Hopefully you made good choice of whats in your bag."
+      timerMessage: "The uproar becomes deafening, and you see hundreds of people marching towards the dilapidated grocery store. They are wielding guns, bats, pitchforks, and other elements that would most likely not end well for you. You decide its best to bug out before they find you."
       }
     ];
   // loading foods from our database when landing page loads
@@ -109,6 +109,10 @@ function foodService($http) {
     count++;
   }
 
+  const resetBag = () => {
+    bugOutBag = [];
+  }
+
   const pushUserStats = (userStats) => {
     user = userStats;
   }
@@ -130,6 +134,7 @@ function foodService($http) {
     incrementCount,
     resetCount,
     resetLocation,
+    resetBag,
     pushUserStats,
     getUserStats
   }

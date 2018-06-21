@@ -7,6 +7,7 @@ const navComponent = {
 
         vm.resetGame = () => {
             foodService.resetCount();
+            foodService.resetBag();
         }
 
     }]

@@ -1,18 +1,19 @@
 <nav-component></nav-component>
-<h1>Good Game</h1>
-<p>You have made it to Adams Hidden Bunker. Let's see what you have brought and chaeck out your survivor rate.</p>
+<h1>The End?</h1>
+<p>After some struggling with your directions, you eventually make it to Adam's Hidden Bunker. With your remaining rations, you use the secret knock on his door, and moments later, he opens the hatch to your relief. Your journey has ended... for now.</p>
 
 <h3> In your bug out bag:</h3>
-<div ng-repeat="item in $ctrl.endBag track by $index">
-    <img class="food_img" ng-src="{{ item.img }}">
-    <p>{{ item.food_name }}</p>
-    <p>{{ item.cal }}</p>
+<div class="final_container">
+    <div class="final_items" ng-repeat="item in $ctrl.endBag track by $index">
+        <img class="food_img" ng-src="{{ item.img }}">
+        <p>{{ item.food_name }}</p>
+        <p>{{ item.cal }}</p>
+    </div>
 </div>
-
 
 <section>
     <p>You have collected {{ $ctrl.totalCal }} calories.</p>
     <!-- add an addtional 3 weeks after they are out of calorie--> 
-    <p>The calories you collected will sustain you for {{ $ctrl.totalDays + 21 }} days before you need more food.</p> 
+    <p>The calories you collected can sustain you for {{ $ctrl.totalDays + 21 }} days, assuming the worst hasn't passed.</p> 
 </section>
-<footer></footer>
+<footer></footer> 
