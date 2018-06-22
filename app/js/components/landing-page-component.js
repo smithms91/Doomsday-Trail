@@ -6,7 +6,7 @@ const landingPageComponent = {
     controller: ["foodService", "$location", function(foodService, $location) {
         const vm = this;
         foodService.getFoodItemsFromDB();
-        
+        angular.element(document.body).addClass("animate-background");
 
         vm.popup = false;
         vm.tempFoodArray;
@@ -21,6 +21,7 @@ const landingPageComponent = {
 
         vm.nextPage = () => {
             $location.path("/prepper-stats-component");
+            angular.element(document.body).removeClass("animate-background");
         };
 
         vm.aboutGame = () => {
@@ -31,10 +32,10 @@ const landingPageComponent = {
             }
         }
 
-        vm.makeTheCall = () => {
-            console.log("make the call button working")
-            // vm.tempFoodArray = foodService.getFoodItems();
-        };
+        // vm.makeTheCall = () => {
+        //     console.log("make the call button working")
+        //     vm.tempFoodArray = foodService.getFoodItems();
+        // };
 
         // SAVE THIS FOR LATER USE, IN CASE WE WANT TO ADD MORE FOOD.
         // vm.pushToDB = (food) => {

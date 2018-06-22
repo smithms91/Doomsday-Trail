@@ -6,9 +6,10 @@
 
     <h1 class="stat_header">Enter your stats</h1>
     
-    <label>Enter your Name</label>
-    <input class="name_input" ng-model="$ctrl.user.username" placeholder="Enter your name">
-
+    <div class="name">
+        <label>Name</label>
+        <input class="name_input" ng-model="$ctrl.user.username" placeholder="Enter your name">
+    </div>
     <div class="age">
         <label>Age:</label>
         <input ng-model="$ctrl.user.age" type="number" min="0" max="99" ng-change="$ctrl.calsPerDay();" placeholder="36">
@@ -21,15 +22,14 @@
     
     <div class="male_female">
         <div class="male">
-            <label>Male:</label>
-            <input ng-model="$ctrl.user.sex" value="male" type="radio" name="gender" ng-change="$ctrl.calsPerDay();" checked>
+            <input ng-model="$ctrl.user.sex" type="radio" class="radio_item" value="male" name="item" id="radio1" ng-change="$ctrl.calsPerDay();">
+            <label class="label_item" for="radio1"> <img class="male_img" src="man-silhouette.png"> </label>
         </div>
-
         <div class="female">
-            <label>Female:</label>
-            <input ng-model="$ctrl.user.sex" value="female" type="radio" name="gender" ng-change="$ctrl.calsPerDay();">
+            <input ng-model="$ctrl.user.sex" type="radio" class="radio_item" value="female" name="item" id="radio2" ng-change="$ctrl.calsPerDay();">
+            <label class="label_item" for="radio2"> <img class="female_img" src="female-silhouette.png"> </label>
         </div>
-    </div>
+        </div>
 
     <div class="weight">
         <label>Weight:</label>

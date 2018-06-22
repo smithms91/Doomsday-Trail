@@ -8,6 +8,8 @@ const locationComponent = {
       vm.counter = foodService.returnCount();
       vm.locationItems = foodService.randomizeFoods(vm.counter);
       vm.bagItems = foodService.getBagItems();
+      document.body.style.backgroundImage = `url(${vm.currentLocation[vm.counter].img})`
+
 
       // THIS IS WHEN ANIMATION ENDS DO SOMETHING 
       // vm.man = document.querySelector(".man_box");
@@ -45,8 +47,6 @@ const locationComponent = {
         //WE SEND THE PLAYER TO THE FINAL PAGE
       }
 
-      document.body.style.backgroundImage = `url(${vm.currentLocation[vm.counter].img})`
-      
 
       vm.timerAnimation = `animation:forward ${vm.currentLocation[vm.counter].timer}s linear;`;
       let pageTimeout = setTimeout(vm.moveToNextLocation, vm.currentLocation[vm.counter].timer * 1000);

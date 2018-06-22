@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* Landing Page Styles */
+
+/* Start About Popup*/
+.popup {
+    width: 300px;
+    background-color: rgb(46, 42, 42);
+    height: 300px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    border-radius: 5px;
+  }  
+  .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4%;
+    width: 50px;
+  }
+  
+  .about-title {
+    margin-top: 13%;
+  }
+
+/* End About Pop Up 
+
+
+
+
+
+
+
+/************************************************************** For Tablet */
+@media only screen and (min-width: 600px){
+    /* body {
+        background-image: url("../img/night-mobile.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh;
+    } */
+    .popup {
+      width: 500px;    
+      height: 300px;     
+    }
+    .close-btn {
+      width: 15%;
+    }
+  
+  }
+
+
+
+
+  /*********************************************************** For Desktop */
+  @media only screen and (min-width: 1000px){
+    .popup {
+      width: 800px;    
+      height: 300px;  
+    }
+    .close-btn {
+      width: 15%;
+     
+      
+    }
+  
+  }
