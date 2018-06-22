@@ -6,7 +6,6 @@
 }
 
 body {
-  background-image: url("../img/night-full.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -37,21 +36,7 @@ ng-view {
 
 /*buttons*/
 
-.landing_button_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
 
-.landing_buttons {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  margin: 20px;
-  width: 20%;
-  font-size: 20px;
- }
 
 /* User stats*/
 
@@ -200,112 +185,18 @@ from { background-position: 0px; }
 @keyframes animatedBackground {
   0% { background-position: 0 0; background-color: skyblue; }
   25% { background-position: 50% 0; background-color: darkorange }
-  35% { background-color: darkmagenta}
   50% { background-position: 100% 0; background-color: darkblue; }
-  65% { background-color: darkmagenta }
   75% { background-position: -50% 0; background-color: darkorange}
   100% { background-position: 0 0; background-color: skyblue; }
 }
 
 .animate-background	{ 
 	width: 100%; 
-	height: 924px; 
+	height: 100%; 
 	background-image: url("../img/silhouette-buildings-12.png");
 	background-position: 0px 0px;
   background-repeat: repeat-x;
   background-color: darkblue;
 
 	animation: animatedBackground 80s linear infinite;
-}
-
-
-/* Story Bubble */
-.talk-bubble {
-  margin: 40px;
-  display: inline-block;
-  position: relative;
-  width: 40%;
-  height: auto;
-  background-color: lightyellow;
-  border: 8px solid #666;
-  border-radius: 30px;
-  top: 25%;
-}
-
-.bubble {
-  transition: all 3s;
-  animation: slideUp;
-}
-
-/* Top Half of Bubble */
-.bubble:before {
-  content: ' ';
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: 30px;
-  right: auto;
-  top: auto;
-  bottom: -40px;
-  border: 20px solid;
-  border-color: #666 transparent transparent #666;
-}
-/* Bottom Part of Bubble */
-.bubble:after{
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: 38px;
-    right: auto;
-    top: auto;
-    bottom: -20px;
-    border: 12px solid;
-    border-color: lightyellow transparent transparent lightyellow;
-}
-
-.talktext{
-  padding: 1em;
-  text-align: left;
-  line-height: 1.5em;
-}
-
-.click {
-  display: inline-block;
-  position: relative;
-  top: 6px;
-  right: -4px;
-  border-radius: 100%;
-  color: black;
-  background-color: white;
-}
-.text {
-  display: inline;
-  color: black;
-}
-
-.center {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.button-glow {
-  animation: glowing 5000ms infinite;
-}
-@keyframes glowing {
-  0% { box-shadow: 0 0 -10px #c4a300; }
-  40% { box-shadow: 0 0 20px #c4a300; }
-  60% { box-shadow: 0 0 20px #c4a300; }
-  100% { box-shadow: 0 0 -10px #c4a300; }
-}
-
-@media only screen and (max-width: 600px){
-  body {
-      background-image: url("../img/night-mobile.jpg");
-      background-attachment: fixed;
-      background-size: cover;
-      height: 100vh;
-  }
 }

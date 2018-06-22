@@ -6,10 +6,11 @@ const navComponent = {
         const vm = this;
 
         vm.resetGame = () => {
+            clearTimeout(pageTimeout);
             foodService.resetCount();
             foodService.resetBag();
+            angular.element(document.body).addClass("animate-background");
         }
-
     }]
 }
 

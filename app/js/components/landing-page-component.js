@@ -21,7 +21,6 @@ const landingPageComponent = {
 
         vm.nextPage = () => {
             $location.path("/prepper-stats-component");
-            angular.element(document.body).removeClass("animate-background");
         };
 
         vm.aboutGame = () => {

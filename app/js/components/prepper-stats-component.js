@@ -26,6 +26,7 @@ const prepperStatsComponent = {
         vm.nextPage = (user) => {
             foodService.pushUserStats(user);
             $location.path("/story-component");
+            angular.element(document.body).removeClass("animate-background");
         }
     }]
 }
