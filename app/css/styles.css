@@ -254,6 +254,7 @@ from { background-position: 0px; }
   top: 6px;
   right: -4px;
   border-radius: 100%;
+  color: black;
   background-color: white;
 }
 .text {

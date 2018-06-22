@@ -1,40 +1,44 @@
 <nav-component></nav-component>
-<form ng-submit="$ctrl.calsPerDay();">
-  <div class="header_section">
+
+<form class="prepper_form" ng-submit="$ctrl.calsPerDay();">
+
+    <img class="logo" src="logo.png" alt="">
+
     <h1 class="stat_header">Enter your stats</h1>
-  </div>
+    
+    <label>Enter your Name</label>
+    <input class="name_input" ng-model="$ctrl.user.username" placeholder="Enter your name">
 
-  <div><input ng-model="$ctrl.user.username" placeholder="Enter your name" value="Thor"></div>
-  <div class="age_height">
     <div class="age">
-      <label class="info_label">Age:</label>
-      <input ng-model="$ctrl.user.age" class="age_input" class="num_input" id="age" type="number" min="0" ng-value="27" ng-change="$ctrl.calsPerDay();" value="36">
+        <label>Age:</label>
+        <input ng-model="$ctrl.user.age" type="number" min="0" max="99" ng-change="$ctrl.calsPerDay();" placeholder="36">
     </div>
+
     <div class="height">
-      <label class="info_label">Height in Inches:</label>
-      <input ng-model="$ctrl.user.height" class="height_input" class="num_input" id="height" type="number" min="0" ng-value="70" ng-change="$ctrl.calsPerDay();" value="70">
+        <label>Height in Inches:</label>
+        <input ng-model="$ctrl.user.height" type="number" min="0" max="300" ng-change="$ctrl.calsPerDay();" placeholder="70">
     </div>
-  </div>
+    
+    <div class="male_female">
+        <div class="male">
+            <label>Male:</label>
+            <input ng-model="$ctrl.user.sex" value="male" type="radio" name="gender" ng-change="$ctrl.calsPerDay();" checked>
+        </div>
 
-  <div class="male_female">
-    <div class="male">
-      <label class="info_label">Male:</label>
-      <input ng-model="$ctrl.user.sex" value="male" class="radio_sex" id="male" type="radio" name="gender" checked ng-change="$ctrl.calsPerDay();">
+        <div class="female">
+            <label>Female:</label>
+            <input ng-model="$ctrl.user.sex" value="female" type="radio" name="gender" ng-change="$ctrl.calsPerDay();">
+        </div>
     </div>
-    <div class="female">
-      <label class="info_label">Female:</label>
-      <input ng-model="$ctrl.user.sex" value="female" class="radio_sex" id="female" type="radio" name="gender" ng-change="$ctrl.calsPerDay();">
+
+    <div class="weight">
+        <label>Weight:</label>
+        <input ng-model="$ctrl.user.weight" type="number" min="0" max="500" ng-change="$ctrl.calsPerDay();" placeholder="200">
     </div>
-  </div>
-
-  <div class="weight">
-    <label class="info_label">Weight:</label>
-    <input ng-model="$ctrl.user.weight" class="weight_input" class="num_input" id="weight" type="number" min="0" ng-value="225" ng-change="$ctrl.calsPerDay();" value="200">
-  </div>
-
-  <label class="cal_info">
-    You need {{ $ctrl.user.result }} calories per day.
-  </label>
-
-  <button class="go_button" ng-click="$ctrl.nextPage($ctrl.user)">Go!</button>
+    
+    <label class="cal_info">
+        You need {{ $ctrl.user.result }} calories per day.
+    </label>
+    
+    <button class="go_button" ng-click="$ctrl.nextPage($ctrl.user)">Go!</button>
 </form>

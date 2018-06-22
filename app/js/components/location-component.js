@@ -45,6 +45,9 @@ const locationComponent = {
         //WE SEND THE PLAYER TO THE FINAL PAGE
       }
 
+      document.body.style.backgroundImage = `url(${vm.currentLocation[vm.counter].img})`
+      
+
       vm.timerAnimation = `animation:forward ${vm.currentLocation[vm.counter].timer}s linear;`;
       let pageTimeout = setTimeout(vm.moveToNextLocation, vm.currentLocation[vm.counter].timer * 1000);
   }]

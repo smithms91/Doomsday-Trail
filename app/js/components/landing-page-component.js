@@ -31,10 +31,6 @@ const landingPageComponent = {
             }
         }
 
-        vm.getRandomFoods = (page) => {
-          
-        }
-
         vm.makeTheCall = () => {
             console.log("make the call button working")
             // vm.tempFoodArray = foodService.getFoodItems();

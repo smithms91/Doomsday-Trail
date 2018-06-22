@@ -6,6 +6,7 @@ const storyComponent = {
         const vm = this;
         vm.counter = foodService.returnCount();
         vm.message = foodService.returnLocations();
+        document.body.style.backgroundImage = "url('../img/night-full.jpg')";
 
         vm.nextPage = () => {
             $location.path("/location-component");
@@ -33,6 +34,7 @@ const storyComponent = {
 
         // typeWriter();
         // setTimeout(typeWriter, 1000);
+
      }]
 }
 
