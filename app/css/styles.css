@@ -80,39 +80,10 @@ ng-view {
   margin-top: 20px
 }
 
-/*Bag Containers */
-.bag-container {
-  width: 75%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  background-color: lightblue;
-}
+
 
 .final-bag {
   margin-top: 20px;
-}
-
-.food-container {
-  width: 75%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  background-color: lightblue;
-}
-
-.food-choices {
-  margin: 0 auto 20px auto;
-  /* display: flex; */
-  background-color: red;
-  border: 1px solid purple;
-  width: 50%;
-  height: 100%;
-  flex-wrap: wrap;
 }
 
 .final_container {
@@ -121,11 +92,6 @@ ng-view {
   align-items: center;
   text-align: center;
   flex-wrap: wrap;
-}
-
-.food_img {
-  width: 100px;
-  height: 100px;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -177,26 +143,3 @@ from { background-position: 0px; }
   to { transform: translateX(100%); }  
 }
 
-.city-background {
-  background: url("../img/silhouette-buildings-12.png");
-  animation: walk-east 1s steps(1) infinite;
-}
-
-@keyframes animatedBackground {
-  0% { background-position: 0 0; background-color: skyblue; }
-  25% { background-position: 50% 0; background-color: darkorange }
-  50% { background-position: 100% 0; background-color: darkblue; }
-  75% { background-position: -50% 0; background-color: darkorange}
-  100% { background-position: 0 0; background-color: skyblue; }
-}
-
-.animate-background	{ 
-	width: 100%; 
-	height: 100%; 
-	background-image: url("../img/silhouette-buildings-12.png");
-	background-position: 0px 0px;
-  background-repeat: repeat-x;
-  background-color: darkblue;
-
-	animation: animatedBackground 80s linear infinite;
-}

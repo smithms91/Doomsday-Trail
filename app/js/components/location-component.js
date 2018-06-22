@@ -32,7 +32,7 @@ const locationComponent = {
 
       vm.moveToNextLocation = () => {
         foodService.resetLocation();
-        clearTimeout(pageTimeout);
+        clearTimeout(vm.pageTimeout);
         if ( vm.counter < vm.currentLocation.length - 1) {
           console.log(vm.counter);
           $route.reload();
@@ -47,9 +47,14 @@ const locationComponent = {
         //WE SEND THE PLAYER TO THE FINAL PAGE
       }
 
+      // $ctrl.pageTimeOut($ctrl.moveToNextLocation)
+
+      // vm.pageTimeOut = (functionToRun) => {
+
+      // }
 
       vm.timerAnimation = `animation:forward ${vm.currentLocation[vm.counter].timer}s linear;`;
-      let pageTimeout = setTimeout(vm.moveToNextLocation, vm.currentLocation[vm.counter].timer * 1000);
+      vm.pageTimeout = setTimeout(vm.moveToNextLocation, vm.currentLocation[vm.counter].timer * 1000);
   }]
 };
 

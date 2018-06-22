@@ -1,15 +1,18 @@
 "use strict";
 
 const navComponent = {
+
     templateUrl: `../templates/nav.template.html`,
     controller: ["foodService", "$location", function(foodService, $location) {
         const vm = this;
 
         vm.resetGame = () => {
-            clearTimeout(pageTimeout);
+            console.log("yo");
             foodService.resetCount();
             foodService.resetBag();
+            angular.element(document.body).css("");
             angular.element(document.body).addClass("animate-background");
+            // angular.element(document.body).style.backgroundImage("url:'../img/linkhere.png'");
         }
     }]
 }

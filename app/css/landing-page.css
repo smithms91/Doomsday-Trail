@@ -15,18 +15,19 @@
     transform: translate(-50%, -50%);
     padding: 1rem;
     border-radius: 5px;
-  }  
-  .close-btn {
+}  
+
+.close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
     /* padding: 4%; */
     width: 15px;
-  }
-  
+}
+
   .about-title {
     margin-top: 9%;
-  }
+}
 
 /* End About Pop Up */
 
@@ -34,7 +35,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
 }
 
 .landing_buttons {
@@ -46,9 +47,28 @@
   font-size: 20px;
  }
 
+ @keyframes animatedBackground {
+  0% { background-position: 0 0; background-color: skyblue; }
+  25% { background-position: 50% 0; background-color: darkorange }
+  50% { background-position: 100% 0; background-color: darkblue; }
+  75% { background-position: -50% 0; background-color: darkorange}
+  100% { background-position: 0 0; background-color: skyblue; }
+}
 
+.animate-background	{ 
+	width: 100%; 
+	height: 100%; 
+	background-image: url("../img/silhouette-buildings-12.png");
+	background-position: 0px 0px;
+  background-repeat: repeat-x;
+  background-color: darkblue;
 
+	animation: animatedBackground 80s linear infinite;
+}
 
+.main_logo {
+  width: 100%;
+}
 
 
 
@@ -72,6 +92,7 @@
       margin-top: 5%;
     }
   
+
   }
 
 
