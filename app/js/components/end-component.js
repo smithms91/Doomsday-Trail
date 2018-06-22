@@ -7,12 +7,11 @@ const endComponent = {
         vm.endBag = foodService.getBagItems();
         vm.userStuff = foodService.getUserStats();
         vm.totalCal = 0;
-        vm.totalDays = Math.floor(vm.totalCal / Number(vm.userStuff.result));
-
 
         for (let i = 0; i < vm.endBag.length; i++) {
             vm.totalCal += vm.endBag[i].cal;
         }
+        vm.totalDays = Math.floor(vm.totalCal / Number(vm.userStuff.result));
 
         console.log(vm.userStuff);
         console.log(vm.totalDays);
