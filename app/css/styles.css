@@ -192,6 +192,11 @@ from { background-position: 0px; }
   to { transform: translateX(100%); }  
 }
 
+.city-background {
+  background: url("../img/silhouette-buildings-12.png");
+  animation: walk-east 1s steps(1) infinite;
+}
+
 /* Story Bubble */
 .talk-bubble {
   margin: 40px;
