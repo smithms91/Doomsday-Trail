@@ -13,8 +13,8 @@ function foodService($http) {
       name: "Home", 
       foodSize: 6,
       img: "/img/home.jpg",
-      message: "Doomsday has arrived. Major cities have been hit by electromagnetic pulse bombs, and shut off the grid. The world is dark, and people are losing their minds. You look out the window at the carnage ensuing, and realize there is an angry mob of people coming towards your house! You have a short amount of time to look through your pantry and grab whatever you need to survive for as long as you can. Your bag can only hold about six items, so choose carefully. (You can add and remove items from your bag by clicking on their boxes.) Time to Bug Out!",
-      timer: 20,
+      message: "Doomsday has arrived. Major cities have been hit by electromagnetic pulse bombs, and shut off the grid. The world is dark, and people are losing their minds. You look out the window at the carnage ensuing, and realize there is an angry mob of people coming towards your house! You have a short amount of time to look through your pantry and grab whatever you need to survive for as long as you can. Your bag can only hold about six items, and time is of the essence, because when the guy reaches the edge of the screen, he bugs out with whatever is in your Bug Out bag. Add and remove items from your bag by clicking on their boxes. Make wise decisions and choose quickly, because its time to Bug Out!",
+      timer: 15,
       timermessage: "The front door busts open and several rioters crash through. Realizing you are out of time, you make a break for your backdoor with whatever items you might have grabbed."
     },
     {
@@ -22,7 +22,7 @@ function foodService($http) {
       foodSize: 8,
       img: "/img/gas-station.jpg",
       message: "You escape down the street from your home, passing disabled cars all around you. You walk for an hour, before finally come across the nearest gas station. It already looks pretty picked over but you take cover within as you hear gun shots in the distance. They sound like they are getting closer.",
-      timer: 15,
+      timer: 12,
       timerMessage: "The glass shatters, and bullets rip through the wall behind you. You see several people attacking each other and decide in your best interests to make a break for it."
     },
     {
@@ -30,7 +30,7 @@ function foodService($http) {
       foodSize: 10, 
       img: "/img/super-market.jpg",
       message: "You feel you have been aimlessly running, not even aware of where you are anymore. By some subconscious decision, you find yourself at the supermarket, where glass has been broken out, destroyed baskets litter the parking lot, and a darkness blankets the inside. Several lone people scatter from various openings, and the sounds of a distant uproar seem to be approaching fast. Perhaps there is something inside that you can take with you before the inevitable arrives.",
-      timer: 10,
+      timer: 9,
       timerMessage: "The uproar becomes deafening, and you see hundreds of people marching towards the dilapidated grocery store. They are wielding guns, bats, pitchforks, and other elements that would most likely not end well for you. You decide its best to bug out before they find you."
       }
     ];

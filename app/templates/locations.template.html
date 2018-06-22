@@ -9,13 +9,14 @@
         </div>
     </section>
         
-    <h2>Your Items</h2>
+    <h2 class="your-items-container">Your Items</h2>
     <section class="bag-container">
         <div class="bug-out-bag" ng-repeat="item in $ctrl.bagItems track by $index" ng-click="$ctrl.moveToLocation($index)">
             <img class="food_img" ng-src="{{ item.img }}">
             <p>{{ item.food_name }}</p> 
         </div>
     </section>
+
 </div>
         
 <footer>

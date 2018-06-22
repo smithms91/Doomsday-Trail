@@ -90,6 +90,10 @@ ng-view {
   height: 75px;
   margin: 10px;
 }
+/*Your Itmes container */
+.your-items-container {
+  margin-top: 20px
+}
 
 /*Bag Containers */
 .bag-container {
@@ -100,6 +104,10 @@ ng-view {
   align-items: center;
   padding: 1rem;
   background-color: lightblue;
+}
+
+.final-bag {
+  margin-top: 20px;
 }
 
 .food-container {
