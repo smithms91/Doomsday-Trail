@@ -13,7 +13,7 @@ function foodService($http) {
       name: "Home", 
       foodSize: 6,
       img: "/img/home.jpg",
-      message: "Doomsday has arrived. Major cities have been hit by electromagnetic pulse bombs, and shut off the grid. The world is dark, and people are losing their minds. You look out the window at the carnage ensuing, and realize there is an angry mob of people coming towards your house! You have a short amount of time to look through your pantry and grab whatever you need to survive for as long as you can.",
+      message: "Doomsday has arrived. Major cities have been hit by electromagnetic pulse bombs, and shut off the grid. The world is dark, and people are losing their minds. You look out the window at the carnage ensuing, and realize there is an angry mob of people coming towards your house! You have a short amount of time to look through your pantry and grab whatever you need to survive for as long as you can. Your bag can only hold about six items, so choose carefully. (You can add and remove items from your bag by clicking on their boxes.) Time to Bug Out!",
       timer: 20,
       timermessage: "The front door busts open and several rioters crash through. Realizing you are out of time, you make a break for your backdoor with whatever items you might have grabbed."
     },
