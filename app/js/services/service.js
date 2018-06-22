@@ -13,7 +13,7 @@ function foodService($http) {
       name: "Home", 
       foodSize: 6,
       img: "/img/home.jpg",
-      message: "Doomsday has arrived. Major cities have been hit by electromagnetic pulse bombs, and shut off the grid. The world is dark, and people are losing their minds. You look out the window at the carnage ensuing, and realize there is an angry mob of people coming towards your house! You have a short amount of time to look through your pantry and grab whatever you need to survive for as long as you can. Your bag can only hold about six items, and time is of the essence, because when the guy reaches the edge of the screen, he bugs out with whatever is in your Bug Out bag. Add and remove items from your bag by clicking on their boxes. Make wise decisions and choose quickly, because its time to Bug Out!",
+      message: "Doomsday has arrived. The country is being ravaged by attacks on the power grid, causing mass panic. Carnage ensues outside of your house, as mobs and looters pillage the area. Time is of the essense, and looters are approaching your home. You grab a bag with limited space, and load up what little you have left in your pantry. Add and remove items from your bag by clicking on their boxes before your character 'bugs out' and moves to the next area. Make wise decisions and choose quickly!",
       timer: 15,
       timermessage: "The front door busts open and several rioters crash through. Realizing you are out of time, you make a break for your backdoor with whatever items you might have grabbed."
     },
