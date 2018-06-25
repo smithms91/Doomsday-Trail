@@ -9,8 +9,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
-// app.use(express.urlencoded()); // to support URL-encoded bodies
-
 
 
 app.use("/portal", mainRoute);

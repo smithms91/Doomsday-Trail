@@ -2,7 +2,7 @@
 
 <form class="prepper_form" ng-submit="$ctrl.calsPerDay();">
 
-    <img class="logo" src="logo.png" alt="">
+    <!-- <img class="logo" src="logo.png" alt=""> -->
 
     <h1 class="stat_header">Enter your stats</h1>
     
@@ -12,17 +12,17 @@
     </div>
     <div class="age">
         <label>Age:</label>
-        <input ng-model="$ctrl.user.age" type="number" min="0" max="99" ng-change="$ctrl.calsPerDay();" placeholder="36">
+        <input ng-model="$ctrl.user.age" type="number" min="0" max="99" ng-init="$ctrl.user.age=23;" ng-change="$ctrl.calsPerDay();" placeholder="36">
     </div>
 
     <div class="height">
         <label>Height in Inches:</label>
-        <input ng-model="$ctrl.user.height" type="number" min="0" max="300" ng-change="$ctrl.calsPerDay();" placeholder="70">
+        <input ng-model="$ctrl.user.height" type="number" min="0" max="300" ng-init="$ctrl.user.height=70;" ng-change="$ctrl.calsPerDay();" placeholder="70">
     </div>
     
     <div class="male_female">
         <div class="male">
-            <input ng-model="$ctrl.user.sex" type="radio" class="radio_item" value="male" name="item" id="radio1" ng-change="$ctrl.calsPerDay();">
+            <input ng-model="$ctrl.user.sex" ng-init="$ctrl.user.sex='male';" type="radio" class="radio_item" value="male" name="item" id="radio1" ng-change="$ctrl.calsPerDay();">
             <label class="label_item" for="radio1"> <img class="male_img" src="../img/male.jpg"> </label>
         </div>
         <div class="female">
@@ -33,12 +33,12 @@
 
     <div class="weight">
         <label>Weight:</label>
-        <input ng-model="$ctrl.user.weight" type="number" min="0" max="500" ng-change="$ctrl.calsPerDay();" placeholder="200">
+        <input ng-model="$ctrl.user.weight" type="number" min="0" max="500" ng-init="$ctrl.user.weight=200;" ng-change="$ctrl.calsPerDay();" placeholder="200">
     </div>
     
     <label class="cal_info">
         You need {{ $ctrl.user.result }} calories per day.
     </label>
     
-    <button class="go_button" ng-click="$ctrl.nextPage($ctrl.user)">Go!</button>
+    <button class="go_button" ng-click="$ctrl.nextPage($ctrl.user); $ctrl.calsPerDay();">Go!</button>
 </form>
