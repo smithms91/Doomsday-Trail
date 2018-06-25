@@ -15,7 +15,7 @@ function foodService($http) {
       img: "/img/home.jpg",
       message: "Doomsday has arrived. The country is being ravaged by attacks on the power grid, causing mass panic. Carnage ensues outside of your house, as mobs and looters pillage the area. Time is of the essense, and looters are approaching your home. You grab a bag with limited space, and load up what little you have left in your pantry. Add and remove items from your bag by clicking on their boxes before your character 'bugs out' and moves to the next area. Make wise decisions and choose quickly!",
       timer: 150,
-      timermessage: "The front door busts open and several rioters crash through. Realizing you are out of time, you make a break for your backdoor with whatever items you might have grabbed."
+      timermessage: "The front door busts open and several rioters crash through! You better make a break for it before they find you!"
     },
     {
       name: "Gas Station",
