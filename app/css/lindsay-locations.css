@@ -27,7 +27,7 @@ nav {
     justify-content: center;
     align-items: center;    
     background-color: #555555;
-    color: rgb(173, 171, 171);
+    color: white;
     border-bottom: #777777 1px solid;
 }
 
@@ -121,15 +121,22 @@ nav {
         border-right: #777777 1px solid;
         border-left: #777777 1px solid;
         background-color: #555555;
-    }
-  
+    }   
     .available-items-container {        
-        width: 40%;          
+        width: 40%; 
       
     }
+    .available-header {
+        margin-top: -25px;
+
+    }
+
+    .available-items-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
     .available-items {
-        width: 30%;        
-        
+        width: 30%;   
         padding: 3px;      
         border: none;
         margin: 5px;
