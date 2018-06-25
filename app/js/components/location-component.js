@@ -1,14 +1,19 @@
 "use strict";
 
 const locationComponent = {
-  templateUrl: "../templates/locations.template.html",
+  templateUrl: "../templates/lindsay-locations.template.html",
   controller: ["foodService", "$location", "$route", function(foodService, $location, $route) {
       const vm = this;
       vm.currentLocation = foodService.returnLocations();
       vm.counter = foodService.returnCount();
       vm.locationItems = foodService.randomizeFoods(vm.counter);
       vm.bagItems = foodService.getBagItems();
-      document.body.style.backgroundImage = `url(${vm.currentLocation[vm.counter].img})`
+      // Added vm.currentMessage to add message to template.html 
+      vm.currentMessage = vm.currentLocation[vm.counter].message;
+
+
+      document.body.style.backgroundImage = `url(${vm.currentLocation[vm.counter].img})`;
+
 
 
       // THIS IS WHEN ANIMATION ENDS DO SOMETHING 
