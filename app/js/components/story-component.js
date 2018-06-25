@@ -6,7 +6,7 @@ const storyComponent = {
         const vm = this;
         vm.counter = foodService.returnCount();
         vm.message = foodService.returnLocations();
-        document.body.style.backgroundImage = "url('../img/night-full.jpg')";
+        // document.body.style.backgroundImage = "url('../img/story-building-background.png')";
 
         vm.nextPage = () => {
             $location.path("/location-component");

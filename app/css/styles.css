@@ -75,24 +75,13 @@ ng-view {
   height: 75px;
   margin: 10px;
 }
-/*Your Itmes container */
-.your-items-container {
-  margin-top: 20px
-}
+  /*Your Itmes container */
+  .your-items-container {
+    margin-top: 20px
+  }
 
 
 
-.final-bag {
-  margin-top: 20px;
-}
-
-.final_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-wrap: wrap;
-}
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 

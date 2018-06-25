@@ -12,7 +12,7 @@ const locationComponent = {
       vm.currentMessage = vm.currentLocation[vm.counter].message;
 
 
-      document.body.style.backgroundImage = `url(${vm.currentLocation[vm.counter].img})`;
+      // document.body.style.backgroundImage = `url(${vm.currentLocation[vm.counter].img})`;
 
 
 

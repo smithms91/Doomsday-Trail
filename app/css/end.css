@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .final-bag {
+    margin-top: 20px;
+  }
+  
+  .final_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  
+
+    /************************************************************** For Tablet */
+@media only screen and (min-width: 600px){
+   
+  }
+  
+  
+  /*********************************************************** For Desktop */
+  @media only screen and (min-width: 1000px){
+  
+  }
