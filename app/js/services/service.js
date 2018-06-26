@@ -147,7 +147,7 @@ angular
 
     // THIS CODE IS FOR ADDING ITEMS. WE CAN SET UP THE ARRAY WITH NEW FOODS AND USE THIS TO
     // CALL THE API AND STORE MORE DATA TO OUR DATABASE.
-    // for (let i = 0; i < foodWordlist.length; i++) {
+    // for (let i = 0; i < foodWordlist.length; i++) 
     //   $http.post('https://trackapi.nutritionix.com/v2/natural/nutrients', 
     //     { 'query': `${foodWordlist[i]}`,
     //       // 'query': 'cheese',

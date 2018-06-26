@@ -1,7 +1,7 @@
 "use strict";
 
 const locationComponent = {
-  templateUrl: "../templates/lindsay-locations.template.html",
+  templateUrl: "../templates/locations.template.html",
   controller: ["foodService", "$location", "$route", function(foodService, $location, $route) {
       const vm = this;
       vm.currentLocation = foodService.returnLocations();

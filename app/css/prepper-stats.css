@@ -88,8 +88,7 @@ input {
     }
 
     form {
-        font-size: 25px;
-        background-color: rgba(255, 255, 255, .5);
+        font-size: 25px;        
         text-align: center;
         padding: 2rem;
         width: 100%;

@@ -1,22 +1,35 @@
 * {
-    margin: 0;
-    padding: 0;
-    outline: none;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}  
 
-  .final-bag {
-    margin-top: 20px;
-  }
-  
-  .final_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-wrap: wrap;
-  }
-  
+.final_container {
+  min-height: 30vh;
+  width: 100%;
+  padding: 5px;
+  background-color: #555555;
+  color: rgb(173, 171, 171);
+  border-top: #2e2e2e 1px solid;
+}
+
+.final-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid rgb(175, 174, 174);
+  margin: 3px;
+  padding: 3px;
+  border-radius: 5px;
+}
+.final-food-img {
+width: 45px;
+height: 45px;
+border-radius: 50%;
+}
+
 
     /************************************************************** For Tablet */
 @media only screen and (min-width: 600px){
