@@ -4,6 +4,8 @@
     outline: 0;
     box-sizing: border-box;
 }
+
+
 .prepper-body {
     background-image: url("../img/layers-end/l1_sky-mobile.png"); 
     background-repeat: repeat-x;    

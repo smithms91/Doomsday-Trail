@@ -43,7 +43,7 @@ const locationComponent = {
           console.log(vm.counter);
           $route.reload();
           $location.path("/story-component");
-
+          
        } else if (vm.counter >= vm.currentLocation.length - 1) {
           console.log(vm.counter);
           $route.reload();

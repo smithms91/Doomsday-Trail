@@ -25,6 +25,10 @@ ng-view {
   height: 100vh;
 }
 
+.font-headings {
+  font-family: 'Shojumaru', cursive;
+}
+
 .nav {
   width: 100vw;
 }
