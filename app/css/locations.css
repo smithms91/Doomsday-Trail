@@ -158,7 +158,7 @@ nav {
   
   @keyframes forward {
     from { transform: translateX(0%); }  
-    to { transform: translateX(400%); }
+    to { transform: translateX(100%); }
   }
 
   @keyframes scroll-city {

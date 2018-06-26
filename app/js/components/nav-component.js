@@ -14,6 +14,18 @@ const navComponent = {
             angular.element(document.body).addClass("animate-background");
             // angular.element(document.body).style.backgroundImage("url:../img/linkhere.png");
         }
+
+        vm.aboutGame = () => {
+            if (vm.popup == true) {
+                vm.popup = false;
+            } else {
+                vm.popup = true;
+            }
+        }
+
+        vm.close = () => {
+            vm.popup = false;
+        }
     }]
 }
 

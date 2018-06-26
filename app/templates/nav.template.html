@@ -13,7 +13,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#!/">About <span class="sr-only">(current)</span></a>
+          <a class="nav-link" ng-click="$ctrl.aboutGame();">About <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" ng-click="$ctrl.resetGame();" href="#!/landing-page-component">Quit</a>
@@ -32,3 +32,12 @@
       </ul>
     </div>
   </nav>
+
+
+  <section class="popup" ng-show="$ctrl.popup">
+      <img src="../img/close-x-32.png" class="close-btn" ng-click="$ctrl.close();">
+      <h1 class="about-title">Doomsday Trail</h1>
+      <p>Doomsday Trail is a game based on the game Oregon Trail. During an apocolypse you need to grab food items to survive. Find out how long you will survive, if it all, by playing Doomsday Trail.</p>
+      <p>Programmers: Mike Smith, Lindsay Aiello, Anthony Drummond</p>
+      <p>Artwork from Envato Market</p>
+  </section>
