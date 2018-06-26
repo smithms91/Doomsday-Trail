@@ -27,23 +27,20 @@
 
         <!--With bootstrap-->
         <div class="form-group">
-            <label for="">Name</label>
+            <label>Name</label>
             <input type="text" class="form-control" ng-model="$ctrl.user.username" placeholder="Enter your name">
         </div>
         <div class="form-group">
-            <label for="">Age</label>
-            <input class="form-control" ng-model="$ctrl.user.age" type="number" min="0" max="99" ng-init="$ctrl.user.age=23;" ng-change="$ctrl.calsPerDay();"
-                placeholder="36">
+            <label>Age</label>
+            <input class="form-control" ng-model="$ctrl.user.age" type="number" min="0" max="99" ng-init="$ctrl.user.age=23;" ng-change="$ctrl.calsPerDay();">
         </div>
         <div class="form-group">
-            <label for="">Height in Inches</label>
-            <input class="form-control" ng-model="$ctrl.user.height" type="number" min="0" max="300" ng-init="$ctrl.user.height=70;"
-                ng-change="$ctrl.calsPerDay();" placeholder="70">
+            <label>Height in Inches</label>
+            <input class="form-control" ng-model="$ctrl.user.height" type="number" min="0" max="300" ng-init="$ctrl.user.height=70;" ng-change="$ctrl.calsPerDay();">
         </div>
         <div class="form-group">
-            <label for="">Weight</label>
-            <input class="form-control" ng-model="$ctrl.user.weight" type="number" min="0" max="500" ng-init="$ctrl.user.weight=200;"
-                ng-change="$ctrl.calsPerDay();" placeholder="200">
+            <label>Weight</label>
+            <input class="form-control" ng-model="$ctrl.user.weight" type="number" min="0" max="500" ng-init="$ctrl.user.weight=200;" ng-change="$ctrl.calsPerDay();">
         </div>
 
         <!-- <div class="name left-align">

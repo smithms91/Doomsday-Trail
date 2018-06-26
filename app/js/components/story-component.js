@@ -4,6 +4,7 @@ const storyComponent = {
     templateUrl: `../templates/story.template.html`,
     controller: ["foodService", "$location", function(foodService, $location) {
         const vm = this;
+        foodService.getFoodItemsFromDB();
         vm.counter = foodService.returnCount();
         vm.message = foodService.returnLocations();
         // document.body.style.backgroundImage = "url('../img/story-building-background.png')";
@@ -12,7 +13,7 @@ const storyComponent = {
             $location.path("/location-component");
         }
        
-        angular.element(document.body.).innerHTML = vm.message[vm.counter].message;
+        angular.element(document.querySelector(".text")).append(vm.message[vm.counter].message);
 
         // let i = 0;
         // let txt = `Get ready! You have 15 seconds to grab 3 items. Choose wisely as the more calories in each food the better chance you have of survival.`; /* The text */

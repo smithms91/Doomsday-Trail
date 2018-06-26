@@ -4,11 +4,11 @@ const locationComponent = {
   templateUrl: "../templates/locations.template.html",
   controller: ["foodService", "$location", "$route", function(foodService, $location, $route) {
       const vm = this;
+      foodService.getFoodItemsFromDB();
       vm.currentLocation = foodService.returnLocations();
       vm.counter = foodService.returnCount();
       vm.locationItems = foodService.randomizeFoods(vm.counter);
       vm.bagItems = foodService.getBagItems();
-      // Added vm.currentMessage to add message to template.html 
       vm.currentMessage = vm.currentLocation[vm.counter].message;
 
 

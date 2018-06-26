@@ -41,7 +41,6 @@ function foodService($http) {
       url: "/portal/storedata"
     }).then((response) => {
       foodDatabaseItems = response;
-      console.log(foodDatabaseItems);
     });
   };
 
