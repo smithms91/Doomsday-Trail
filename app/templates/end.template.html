@@ -1,20 +1,22 @@
 <nav-component></nav-component>
-<h1>The End?</h1>
-<p>Although you struggled with your directions, you eventually make it to Adam's Hidden Bunker. With your remaining rations, you use the secret knock on his door, and moments later, he opens the hatch to your relief. Your journey has ended... for now.</p>
+<section class="end-container">
+<h3>The End?</h3>
+<p>Although you struggled with your directions, you eventually make it to Adam's Hidden Bunker.  Your journey has ended... for now.</p>
+<!-- With your remaining rations, you use the secret knock on his door, and moments later, he opens the hatch to your relief. -->
 
-
-<h3 class="final-bag"> In your bug out bag:</h3>
+<h4 class="final-bag"> In your bug out bag:</h4>
 <div class="final_container">
     <div class="final-items" ng-repeat="item in $ctrl.endBag track by $index">
-        <img class="final-food-img" ng-src="{{ item.img }}">
+        <img class="final-food-img hidden-for-small" ng-src="{{ item.img }}">
         <p>{{ item.food_name }} </p><br>
         <p>{{ item.cal }} Calories</p>
     </div>
 </div>
 
-<section>
+<section class="final-numbers">
     <p>You have collected {{ $ctrl.totalCal }} calories.</p>
     <!-- add an addtional 3 weeks after they are out of calorie--> 
     <p>The calories you collected can sustain you for {{ $ctrl.totalDays + 21 }} days, assuming the worst hasn't passed.</p> 
 </section>
-<footer></footer> 
+</section>
+ 

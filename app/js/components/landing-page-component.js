@@ -6,7 +6,7 @@ const landingPageComponent = {
     controller: ["foodService", "$location", function(foodService, $location) {
         const vm = this;
         foodService.getFoodItemsFromDB();
-        angular.element(document.body).addClass("animate-background");
+        // angular.element(document.body).addClass("animate-background");
 
         vm.popup = false;
         vm.tempFoodArray;

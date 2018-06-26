@@ -8,6 +8,10 @@ nav {
     min-height: 10vh;
 }
 
+.locations-body {
+    height: 100vh;
+    background-color: #555555;
+}
 .main {
     background: url("/img/street02_preview_mobile.png");
     background-repeat: repeat-x;
@@ -30,6 +34,11 @@ nav {
     color: white;
     border-bottom: #777777 1px solid;
 }
+.available-items-flex {
+    display: flex;
+    flex-wrap: wrap;
+    }
+    
 
 .available-items {
     width: 45%;
