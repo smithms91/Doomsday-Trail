@@ -123,7 +123,7 @@ nav {
     background: url("../img/sprites/male_run.png");
     width: 120px;
     height: 120px;
-    animation: walk-east-male .5s steps(10) infinite;
+    /* animation: walk-east-male .5s steps(10) infinite; */
     /* position: fixed; */
   }
   
@@ -131,7 +131,7 @@ nav {
     background: url("../img/sprites/female_run.png");
     width: 128px;
     height: 128px;
-    animation: walk-east-female .5s steps(10) infinite;
+    /* animation: walk-east-female .5s steps(10) infinite; */
     /* position: fixed; */
 }
   
@@ -149,7 +149,7 @@ nav {
   
   @keyframes forward {
     from { transform: translateX(0%); }  
-    to { transform: translateX(100%); }  
+    to { transform: translateX(200%); }  
   }
 /***************************************************************** Media Queries ***************/
 

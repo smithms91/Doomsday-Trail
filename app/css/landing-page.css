@@ -42,7 +42,7 @@
   border: none;
   border-radius: 5px;
   margin: 20px;
-  width: 20%;
+  width: 40%;
   font-size: 20px;
  }
 
@@ -90,11 +90,8 @@
     .about-title {
       margin-top: 5%;
     }
-  
 
   }
-
-
 
 
   /*********************************************************** For Desktop */
@@ -110,5 +107,4 @@
     .about-title {
       margin-top: 5%;
     }
-  
   }

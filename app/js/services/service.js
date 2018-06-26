@@ -7,7 +7,7 @@ function foodService($http) {
   let count = 0;
   let bagSize = 6;
   let user = {};
-  let timeleft = 10;
+  
   
   let locations = [
     {
@@ -15,7 +15,7 @@ function foodService($http) {
       foodSize: 6,
       img: "/img/home.jpg",
       message: "Doomsday has arrived. The country is being ravaged by attacks on the power grid, causing mass panic. Carnage ensues outside of your house, as mobs and looters pillage the area. Time is of the essense, and looters are approaching your home. You grab a bag with limited space, and load up what little you have left in your pantry. Add and remove items from your bag by clicking on their boxes before your character 'bugs out' and moves to the next area. Make wise decisions and choose quickly!",
-      timer: 150,
+      timer: 15,
       timermessage: "The front door busts open and several rioters crash through! You better make a break for it before they find you!"
     },
     {
@@ -23,7 +23,7 @@ function foodService($http) {
       foodSize: 8,
       img: "/img/gas-station-dark.jpg",
       message: "You escape down the street from your home, passing disabled cars all around you. You walk for an hour, before finally come across the nearest gas station. It already looks pretty picked over but you take cover within as you hear gun shots in the distance. They sound like they are getting closer.",
-      timer: 120,
+      timer: 12,
       timerMessage: "The glass shatters, and bullets rip through the wall behind you. You see several people attacking each other and decide in your best interests to make a break for it."
     },
     {
@@ -31,7 +31,7 @@ function foodService($http) {
       foodSize: 10, 
       img: "/img/empty-shelf.jpg",
       message: "You feel you have been aimlessly running, not even aware of where you are anymore. By some subconscious decision, you find yourself at the supermarket, where glass has been broken out, destroyed baskets litter the parking lot, and a darkness blankets the inside. Several lone people scatter from various openings, and the sounds of a distant uproar seem to be approaching fast. Perhaps there is something inside that you can take with you before the inevitable arrives.",
-      timer: 9000,
+      timer: 10,
       timerMessage: "The uproar becomes deafening, and you see hundreds of people marching towards the dilapidated grocery store. They are wielding guns, bats, pitchforks, and other elements that would most likely not end well for you. You decide its best to bug out before they find you."
       }
     ];
@@ -45,20 +45,7 @@ function foodService($http) {
     });
   };
 
-  const startTimer = () => {
-    timeleft = 10;
-    downloadTimer = setInterval(function(){
-      timeleft--;
-      document.getElementById("countdowntimer").textContent = timeleft;
-      if(timeleft <= 0)
-        clearInterval(downloadTimer);
-      },1000);
-  }
 
-  const stopTimer = () => {
-    timeleft = 10;
-    clearInterval(downloadTimer);
-  }
 
 // call returnFoodItems from any component
   const returnFoodItems = () => {
@@ -129,9 +116,10 @@ function foodService($http) {
   }
 
   const pushUserStats = (userStats) => {
-    user = userStats;
+    console.log(userStats);
+    user = angular.copy(userStats);
   }
-
+  
   const getUserStats = () => {
     return user;
   }
@@ -151,9 +139,7 @@ function foodService($http) {
     resetLocation,
     resetBag,
     pushUserStats,
-    getUserStats,
-    startTimer,
-    stopTimer
+    getUserStats
   }
 };
 
