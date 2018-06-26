@@ -7,6 +7,7 @@ function foodService($http) {
   let count = 0;
   let bagSize = 6;
   let user = {};
+  let timeleft = 10;
   
   let locations = [
     {
@@ -43,6 +44,21 @@ function foodService($http) {
       foodDatabaseItems = response;
     });
   };
+
+  const startTimer = () => {
+    timeleft = 10;
+    downloadTimer = setInterval(function(){
+      timeleft--;
+      document.getElementById("countdowntimer").textContent = timeleft;
+      if(timeleft <= 0)
+        clearInterval(downloadTimer);
+      },1000);
+  }
+
+  const stopTimer = () => {
+    timeleft = 10;
+    clearInterval(downloadTimer);
+  }
 
 // call returnFoodItems from any component
   const returnFoodItems = () => {
@@ -135,7 +151,9 @@ function foodService($http) {
     resetLocation,
     resetBag,
     pushUserStats,
-    getUserStats
+    getUserStats,
+    startTimer,
+    stopTimer
   }
 };
 

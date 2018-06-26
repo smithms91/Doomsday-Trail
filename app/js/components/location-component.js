@@ -5,11 +5,19 @@ const locationComponent = {
   controller: ["foodService", "$location", "$route", function(foodService, $location, $route) {
       const vm = this;
       foodService.getFoodItemsFromDB();
+      foodService.startTimer();
       vm.currentLocation = foodService.returnLocations();
       vm.counter = foodService.returnCount();
       vm.locationItems = foodService.randomizeFoods(vm.counter);
       vm.bagItems = foodService.getBagItems();
       vm.currentMessage = vm.currentLocation[vm.counter].message;
+
+      vm.currentUser = foodService.getUserStats();
+      if (vm.currentUser.sex = "male") {
+        vm.userClass = "male"
+      } else if (vm.currentUser.sex = "female") {
+        vm.userClass = "female"
+      }
 
 
       // document.body.style.backgroundImage = `url(${vm.currentLocation[vm.counter].img})`;
@@ -37,6 +45,7 @@ const locationComponent = {
 
       vm.moveToNextLocation = () => {
         foodService.resetLocation();
+        foodService.stopTimer();
         clearTimeout(vm.pageTimeout);
         if ( vm.counter < vm.currentLocation.length - 1) {
           console.log(vm.counter);
@@ -57,6 +66,7 @@ const locationComponent = {
       // vm.pageTimeOut = (functionToRun) => {
 
       // }
+
 
       vm.timerAnimation = `animation:forward ${vm.currentLocation[vm.counter].timer}s linear;`;
       vm.pageTimeout = setTimeout(vm.moveToNextLocation, vm.currentLocation[vm.counter].timer * 1000);

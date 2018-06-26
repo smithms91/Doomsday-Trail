@@ -2,26 +2,24 @@
 
 <section class="prepper-body">
     <form class="prepper_form" ng-submit="$ctrl.calsPerDay();">
-
-        <!-- <img class="logo" src="logo.png" alt=""> -->
-
+        
         <h5 class="stat_header">Enter in your character stats</h5>
 
         <div class="male_female">
 
-            <div class="male">
+            <div id="male">
                 <input ng-model="$ctrl.user.sex" ng-init="$ctrl.user.sex='male';" type="radio" class="radio_item" value="male" name="item"
                     id="radio1" ng-change="$ctrl.calsPerDay();">
-                <label class="label_item" for="radio1">
-                    <!-- <img class="male_img" src="../img/Idle_male.png">--> 
-                    <div class="male-idol"></div></label> 
+                <label class="label_item" for="radio1">                    
+                    <div class="male-idle"></div>
+                </label> 
             </div>
 
-            <div class="female">
+            <div id="female">
                 <input ng-model="$ctrl.user.sex" type="radio" class="radio_item" value="female" name="item" id="radio2" ng-change="$ctrl.calsPerDay();">
                 <label class="label_item" for="radio2">
-                    <!-- <img class="female_img" src="../img/Idle_female.png">-->
-                    <div class="female-idol"></div> </label> 
+                    <div class="female-idle"></div>
+                </label> 
             </div>
         </div>
 
@@ -42,28 +40,6 @@
             <label>Weight</label>
             <input class="form-control" ng-model="$ctrl.user.weight" type="number" min="0" max="500" ng-init="$ctrl.user.weight=200;" ng-change="$ctrl.calsPerDay();">
         </div>
-
-        <!-- <div class="name left-align">
-            <label>Name</label>
-            <input class="name_input" ng-model="$ctrl.user.username" placeholder="Enter your name">
-        </div>
-        <div class="age left-align">
-            <label>Age:</label>
-            <input ng-model="$ctrl.user.age" type="number" min="0" max="99" ng-init="$ctrl.user.age=23;" ng-change="$ctrl.calsPerDay();"
-                placeholder="36">
-        </div>
-
-        <div class="height left-align">
-            <label>Height Inch:</label>
-            <input ng-model="$ctrl.user.height" type="number" min="0" max="300" ng-init="$ctrl.user.height=70;" ng-change="$ctrl.calsPerDay();"
-                placeholder="70">
-        </div>
-
-        <div class="weight left-align">
-            <label>Weight:</label>
-            <input ng-model="$ctrl.user.weight" type="number" min="0" max="500" ng-init="$ctrl.user.weight=200;" ng-change="$ctrl.calsPerDay();"
-                placeholder="200">
-        </div> -->
 
         <label class="cal_info">
             You need {{ $ctrl.user.result }} calories per day.

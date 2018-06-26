@@ -120,21 +120,6 @@ input[type=number]::-webkit-outer-spin-button {
               forward 10s linear infinite;
 } */
 
-.man {
-  background:url(../img/running_man8.png);
-  width: 128px;
-  height: 165px;
-  animation: walk-east 1s steps(8) infinite;
-}
-
-@keyframes walk-east {
-from { background-position: 0px; }  
-  to { background-position: -1024px; }
-}
-@keyframes forward {
-  from { transform: translateX(0%); }  
-  to { transform: translateX(100%); }  
-}
 
  /************************************************************** For Tablet */
  @media only screen and (min-width: 600px){
