@@ -3,9 +3,9 @@
   padding: 0;
 }
 
-body {
+.story-background {
   background-image: url("../img/story-building-background-mobile.png"); 
-  
+  height: 100vh;
 }
 
 /* Story Bubble */
@@ -91,7 +91,7 @@ body {
 
   /************************************************************** For Tablet */
 @media only screen and (min-width: 600px){
-  body {
+  .story-background {
     background-image: url("../img/story-building-background.png"); 
     
   }

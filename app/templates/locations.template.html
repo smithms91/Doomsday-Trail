@@ -1,70 +1,71 @@
 <nav-component timeout="$ctrl.pageTimeout"></nav-component>
 
-<div class="main">
-    <div class="man_box" style="{{$ctrl.timerAnimation}}">
-        <div class="man"></div>
-    </div>
-</div>
-
-<section class="footer-content">
-
-    <section class="story">
-        <h3>You are at {{ $ctrl.currentLocation[$ctrl.counter].name }}</h3>
-        <p> {{ $ctrl.currentMessage }} </p>
-    </section>
-
-    <section class="available-items-container">
-        <h3 class="available-header">Available Items</h3>
-        
-
-        <div class="available-items-flex">
-            <div class="available-items" ng-repeat="food in $ctrl.locationItems track by $index" ng-click="$ctrl.moveToBag($index)">
-                <img class="hidden-for-small" class="food_img" ng-src="{{ food.img }}" style="width: 50px; height: 50px;">
-                <p class="custom-p">{{ food.food_name }}</p>
-                <!-- show on hover-->
-            </div>
+<section class="locations-body">
+    <div class="main">
+        <div class="man_box" style="{{$ctrl.timerAnimation}}">
+            <div class="man"></div>
         </div>
+    </div>
 
-        <button class="btn btn-danger btn-block margin5 percent80" ng-click="$ctrl.moveToNextLocation();">Bug Out!</button>
-    </section>
+    <section class="footer-content">
 
-    <section class="bag-container">
-        <h3>Your Bag</h3>
-        <div class="bag-items">
+        <section class="story">
+            <h3>You are at {{ $ctrl.currentLocation[$ctrl.counter].name }}</h3>
+            <p> {{ $ctrl.currentMessage }} </p>
+        </section>
 
-            <div class="bag-item-place-holder">
-                <img src="/img/question-light-64.png" class="question-mark" ng-show="$ctrl.bagItems.length <= 0">
-                <img ng-src="{{ $ctrl.bagItems[0].img }}" class="question-mark" ng-show="$ctrl.bagItems.length > 0" ng-click="$ctrl.moveToLocation(0)">
-                <p class="hidden-for-small" ng-show="$ctrl.bagItems.length > 0">{{ $ctrl.bagItems[0].food_name }}</p>
-            </div>
-            <div class="bag-item-place-holder">
-                <img src="/img/question-light-64.png" class="question-mark" ng-show="$ctrl.bagItems.length <= 1">
-                <img ng-src="{{ $ctrl.bagItems[1].img }}" class="question-mark" ng-show="$ctrl.bagItems.length > 1"  ng-click="$ctrl.moveToLocation(1)">
-                <p class="hidden-for-small" ng-show="$ctrl.bagItems.length > 1">{{ $ctrl.bagItems[1].food_name }}</p>
-            </div>
-            <div class="bag-item-place-holder">
-                <img src="/img/question-light-64.png" class="question-mark" ng-show="$ctrl.bagItems.length <= 2">
-                <img ng-src="{{ $ctrl.bagItems[2].img }}" class="question-mark" ng-show="$ctrl.bagItems.length > 2" ng-click="$ctrl.moveToLocation(2)">
-                <p class="hidden-for-small" ng-show="$ctrl.bagItems.length > 2">{{ $ctrl.bagItems[2].food_name }}</p>
-            </div>
-            <div class="bag-item-place-holder">
-                <img src="/img/question-light-64.png" class="question-mark" ng-show="$ctrl.bagItems.length <= 3">
-                <img ng-src="{{ $ctrl.bagItems[3].img }}" class="question-mark" ng-show="$ctrl.bagItems.length > 3" ng-click="$ctrl.moveToLocation(3)">
-                <p class="hidden-for-small" ng-show="$ctrl.bagItems.length > 3">{{ $ctrl.bagItems[3].food_name }}</p>
-            </div>
-            <div class="bag-item-place-holder">
-                <img src="/img/question-light-64.png" class="question-mark" ng-show="$ctrl.bagItems.length <= 4">
-                <img ng-src="{{ $ctrl.bagItems[4].img }}" class="question-mark" ng-show="$ctrl.bagItems.length > 4" ng-click="$ctrl.moveToLocation(4)">
-                <p class="hidden-for-small" ng-show="$ctrl.bagItems.length > 4">{{ $ctrl.bagItems[4].food_name }}</p>
-            </div>
-            <div class="bag-item-place-holder">
-                <img src="/img/question-light-64.png" class="question-mark" ng-show="$ctrl.bagItems.length <= 5">
-                <img ng-src="{{ $ctrl.bagItems[5].img }}" class="question-mark" ng-show="$ctrl.bagItems.length > 5" ng-click="$ctrl.moveToLocation(5)">
-                <p class="hidden-for-small" ng-show="$ctrl.bagItems.length > 5">{{ $ctrl.bagItems[5].food_name }}</p>
-          
+        <section class="available-items-container">
+            <h3 class="available-header">Available Items</h3>
 
-<!-- version 1 of location template -->
-<!-- <nav-component timeout="$ctrl.pageTimeout"></nav-component>
+
+            <div class="available-items-flex">
+                <div class="available-items" ng-repeat="food in $ctrl.locationItems track by $index" ng-click="$ctrl.moveToBag($index)">
+                    <img class="hidden-for-small" class="food_img" ng-src="{{ food.img }}" style="width: 50px; height: 50px;">
+                    <p class="custom-p">{{ food.food_name }}</p>
+                    <!-- show on hover-->
+                </div>
+            </div>
+
+            <button class="btn btn-danger btn-block margin5 percent80" ng-click="$ctrl.moveToNextLocation();">Bug Out!</button>
+        </section>
+
+        <section class="bag-container">
+            <h3>Your Bag</h3>
+            <div class="bag-items">
+
+                <div class="bag-item-place-holder">
+                    <img src="/img/question-light-64.png" class="question-mark" ng-show="$ctrl.bagItems.length <= 0">
+                    <img ng-src="{{ $ctrl.bagItems[0].img }}" class="question-mark" ng-show="$ctrl.bagItems.length > 0" ng-click="$ctrl.moveToLocation(0)">
+                    <p class="hidden-for-small" ng-show="$ctrl.bagItems.length > 0">{{ $ctrl.bagItems[0].food_name }}</p>
+                </div>
+                <div class="bag-item-place-holder">
+                    <img src="/img/question-light-64.png" class="question-mark" ng-show="$ctrl.bagItems.length <= 1">
+                    <img ng-src="{{ $ctrl.bagItems[1].img }}" class="question-mark" ng-show="$ctrl.bagItems.length > 1" ng-click="$ctrl.moveToLocation(1)">
+                    <p class="hidden-for-small" ng-show="$ctrl.bagItems.length > 1">{{ $ctrl.bagItems[1].food_name }}</p>
+                </div>
+                <div class="bag-item-place-holder">
+                    <img src="/img/question-light-64.png" class="question-mark" ng-show="$ctrl.bagItems.length <= 2">
+                    <img ng-src="{{ $ctrl.bagItems[2].img }}" class="question-mark" ng-show="$ctrl.bagItems.length > 2" ng-click="$ctrl.moveToLocation(2)">
+                    <p class="hidden-for-small" ng-show="$ctrl.bagItems.length > 2">{{ $ctrl.bagItems[2].food_name }}</p>
+                </div>
+                <div class="bag-item-place-holder">
+                    <img src="/img/question-light-64.png" class="question-mark" ng-show="$ctrl.bagItems.length <= 3">
+                    <img ng-src="{{ $ctrl.bagItems[3].img }}" class="question-mark" ng-show="$ctrl.bagItems.length > 3" ng-click="$ctrl.moveToLocation(3)">
+                    <p class="hidden-for-small" ng-show="$ctrl.bagItems.length > 3">{{ $ctrl.bagItems[3].food_name }}</p>
+                </div>
+                <div class="bag-item-place-holder">
+                    <img src="/img/question-light-64.png" class="question-mark" ng-show="$ctrl.bagItems.length <= 4">
+                    <img ng-src="{{ $ctrl.bagItems[4].img }}" class="question-mark" ng-show="$ctrl.bagItems.length > 4" ng-click="$ctrl.moveToLocation(4)">
+                    <p class="hidden-for-small" ng-show="$ctrl.bagItems.length > 4">{{ $ctrl.bagItems[4].food_name }}</p>
+                </div>
+                <div class="bag-item-place-holder">
+                    <img src="/img/question-light-64.png" class="question-mark" ng-show="$ctrl.bagItems.length <= 5">
+                    <img ng-src="{{ $ctrl.bagItems[5].img }}" class="question-mark" ng-show="$ctrl.bagItems.length > 5" ng-click="$ctrl.moveToLocation(5)">
+                    <p class="hidden-for-small" ng-show="$ctrl.bagItems.length > 5">{{ $ctrl.bagItems[5].food_name }}</p>
+
+
+                    <!-- version 1 of location template -->
+                    <!-- <nav-component timeout="$ctrl.pageTimeout"></nav-component>
 <h1>{{ $ctrl.currentLocation[$ctrl.counter].name }}</h1>
 <div class="center">
     <h2>Items To Pick From</h2>
@@ -72,7 +73,7 @@
         <div class="item_box" ng-repeat="food in $ctrl.locationItems track by $index" ng-click="$ctrl.moveToBag($index)">
             <img class="food_img" ng-src="{{ food.img }}">
             <p>{{ food.food_name }}</p> <!-- show on hover-->
-        <!-- </div>
+                    <!-- </div>
     </section>
         
     <h2 class="your-items-container">Your Items</h2>
@@ -90,9 +91,11 @@
         <div class="man"></div>
     </div>
     <button class="bug_out_btn" ng-click="$ctrl.moveToNextLocation();">Bug Out!</button>
-</footer> -->  </div>
-        </div>
+</footer> -->
+                </div>
+            </div>
+
+        </section>
 
     </section>
-
 </section>
