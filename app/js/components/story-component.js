@@ -12,7 +12,7 @@ const storyComponent = {
             $location.path("/location-component");
         }
        
-        document.querySelector(".text").innerHTML = vm.message[vm.counter].message;
+        angular.element(".text").innerHTML = vm.message[vm.counter].message;
 
         // let i = 0;
         // let txt = `Get ready! You have 15 seconds to grab 3 items. Choose wisely as the more calories in each food the better chance you have of survival.`; /* The text */
