@@ -10,8 +10,8 @@ const navComponent = {
             console.log("yo");
             foodService.resetCount();
             foodService.resetBag();
-            angular.element(document.body).removeAttr("style");
-            angular.element(document.body).addClass("animate-background");
+            // angular.element(document.body).removeAttr("style");
+            // angular.element(document.body).addClass("animate-background");
             // angular.element(document.body).style.backgroundImage("url:'../img/linkhere.png'");
         }
     }]

@@ -5,6 +5,17 @@
   box-sizing: border-box;
 }  
 
+nav {
+  min-height: 10vh;
+}
+
+.end-container {
+  background: url("/img/street02_preview_mobile.png");
+  background-repeat: repeat-x;
+  height: 30vh;
+  background-size: auto 100%;
+}
+
 .final_container {
   min-height: 30vh;
   width: 100%;
