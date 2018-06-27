@@ -30,7 +30,7 @@ function foodService($http) {
       foodSize: 10, 
       img: "/img/empty-shelf.jpg",
       message: "You feel you have been aimlessly running, not even aware of where you are anymore. By some subconscious decision, you find yourself at the supermarket, where glass has been broken out, destroyed baskets litter the parking lot, and a darkness blankets the inside. Several lone people scatter from various openings, and the sounds of a distant uproar seem to be approaching fast. Perhaps there is something inside that you can take with you before the inevitable arrives.",
-      timer: 6,
+      timer: 6000,
       timerMessage: "The uproar becomes deafening, and you see hundreds of people marching towards the dilapidated grocery store. They are wielding guns, bats, pitchforks, and other elements that would most likely not end well for you. You decide its best to bug out before they find you."
       }
     ];

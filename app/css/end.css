@@ -15,9 +15,15 @@ nav {
 .end-container {
   background: url("../img/end-full.png");
   background-repeat: repeat-x;  
+<<<<<<< HEAD
   background-size: auto 100%;
   /* height: 100vh; */
   padding: 0 5px;
+=======
+  background-size: auto 100%;  
+  padding: 0 5px;  
+  height: 100vh;
+>>>>>>> 4fec6245f30c6d324a749d0bab9ff3e30a67cb4b
 }
 
 .jumping-female {
@@ -76,9 +82,12 @@ border-radius: 50%;
 @media only screen and (min-width: 600px){
   .final_container {  
     width: 60%;
-    margin: auto;
+    margin: auto;    
+  }    
+   
+
   }
-  }
+  
   
   
   /*********************************************************** For Desktop */
@@ -107,4 +116,9 @@ border-radius: 50%;
       100% { background-position: -1800px; }
     }
     
+    .final_container {
+      border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 18px white;
+    }
   }
