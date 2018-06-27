@@ -19,9 +19,15 @@
   <link rel="stylesheet" href="css/end.css">
 </head>
 <body>
-  
+
 
 <ng-view></ng-view>
+
+<div class="audio-button"><i onclick="mute();" class="material-icons">volume_up</i>
+  <audio id="background_audio" src="http://soundimage.org/wp-content/uploads/2016/03/City-of-Dread_Looping.mp3" autoplay loop>
+    Your browser does not support the <code>audio</code> element.
+  </audio>    
+</div>
 
 
 <!--Angular Scripts-->
@@ -42,5 +48,14 @@
 <script src="js/components/story-component.js"></script>
 <script src="js/components/end-component.js"></script>
 <script src="js/services/service.js"></script>
+<script>
+  function mute() {
+    if (document.getElementById('background_audio').muted === true) {
+      document.getElementById('background_audio').muted = false;
+    } else if (document.getElementById('background_audio').muted === false) {
+      document.getElementById('background_audio').muted = true;
+    }
+  }
+</script>
 </body>
 </html>

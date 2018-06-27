@@ -117,6 +117,13 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
+.audio-button {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
  /************************************************************** For Tablet */
  @media only screen and (min-width: 600px){
 

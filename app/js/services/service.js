@@ -14,7 +14,7 @@ function foodService($http) {
       foodSize: 6,
       img: "/img/home.jpg",
       message: "Doomsday has arrived. The country is being ravaged by attacks on the power grid, causing mass panic. Carnage ensues outside of your house, as mobs and looters pillage the area. Time is of the essense, and looters are approaching your home. You grab a bag with limited space, and load up what little you have left in your pantry. Add and remove items from your bag by clicking on their boxes before your character 'bugs out' and moves to the next area. Make wise decisions and choose quickly!",
-      timer: 1000,
+      timer: 10,
       timermessage: "The front door busts open and several rioters crash through! You better make a break for it before they find you!"
     },
     {
@@ -22,12 +22,12 @@ function foodService($http) {
       foodSize: 8,
       img: "/img/gas-station-dark.jpg",
       message: "You escape down the street from your home, passing disabled cars all around you. You walk for an hour, before finally come across the nearest gas station. It already looks pretty picked over but you take cover within as you hear gun shots in the distance. They sound like they are getting closer.",
-      timer: 800,
+      timer: 8,
       timerMessage: "The glass shatters, and bullets rip through the wall behind you. You see several people attacking each other and decide in your best interests to make a break for it."
     },
     {
       name: "Supermarket", 
-      foodSize: 1000, 
+      foodSize: 10, 
       img: "/img/empty-shelf.jpg",
       message: "You feel you have been aimlessly running, not even aware of where you are anymore. By some subconscious decision, you find yourself at the supermarket, where glass has been broken out, destroyed baskets litter the parking lot, and a darkness blankets the inside. Several lone people scatter from various openings, and the sounds of a distant uproar seem to be approaching fast. Perhaps there is something inside that you can take with you before the inevitable arrives.",
       timer: 6,
