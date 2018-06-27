@@ -3,9 +3,7 @@
 <section class="locations-body">
     <div class="main">
         <span class="font-headings" id="countdowntimer"></span>
-        <div class="{{$ctrl.userClass}} positioning" style="{{$ctrl.timerAnimation}}">
-            <!-- <div class="man"></div> -->
-        </div>
+        <div class="{{$ctrl.userClass}} positioning" style="{{$ctrl.timerAnimation}}"></div>
     </div>
 
     <section class="footer-content">
@@ -63,7 +61,7 @@
                     <img src="/img/question-light-64.png" class="question-mark" ng-show="$ctrl.bagItems.length <= 5">
                     <img ng-src="{{ $ctrl.bagItems[5].img }}" class="question-mark" ng-show="$ctrl.bagItems.length > 5" ng-click="$ctrl.moveToLocation(5)">
                     <p class="hidden-for-small" ng-show="$ctrl.bagItems.length > 5">{{ $ctrl.bagItems[5].food_name }}</p>
-
+                </div>
 
                     <!-- version 1 of location template -->
                     <!-- <nav-component timeout="$ctrl.pageTimeout"></nav-component>

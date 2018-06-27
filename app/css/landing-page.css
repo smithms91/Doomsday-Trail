@@ -1,21 +1,7 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-/* Landing Page Styles */
-
-/* Start About Popup*/
-.popup {
-    width: 300px;
-    background-color: rgb(46, 42, 42);
-    height: 300px;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 1rem;
-    border-radius: 5px;
-}  
 
 .close-btn {
     position: absolute;
@@ -23,10 +9,13 @@
     right: 10px;
     /* padding: 4%; */
     width: 15px;
+    cursor: pointer;
 }
 
-  .about-title {
-    margin-top: 9%;
+.about-title {
+  margin-top: 9%;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 
 .landing_page_logo {
@@ -35,6 +24,11 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
 }
 
 .landing_buttons {
@@ -47,13 +41,7 @@
   background-color: floralwhite;
  }
 
- @keyframes animatedBackground {
-  0% { background-position: 0 0; background-color: skyblue; }
-  25% { background-position: 50% 0; background-color: darkorange }
-  50% { background-position: 100% 0; background-color: darkblue; }
-  75% { background-position: -50% 0; background-color: darkorange}
-  100% { background-position: 0 0; background-color: skyblue; }
-}
+
 
 .animate-background	{ 
 	width: 100%; 
@@ -62,14 +50,32 @@
 	background-position: 0px 0px;
   background-repeat: repeat-x;
   background-color: darkblue;
-
 	animation: animatedBackground 80s linear infinite;
 }
 
-.main_logo {
-  width: 100%;
+.logos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.top_logo {
+  width: 25%;
+}
+
+.bottom_logo {
+  width: 80%;
+  margin-bottom: 4rem;
+}
+
+@keyframes animatedBackground {
+  0% { background-position: 0 0; background-color: skyblue; }
+  25% { background-position: 50% 0; background-color: darkorange }
+  50% { background-position: 100% 0; background-color: darkblue; }
+  75% { background-position: -50% 0; background-color: darkorange}
+  100% { background-position: 0 0; background-color: skyblue; }
+}
 
 
 /************************************************************** For Tablet */
@@ -81,9 +87,9 @@
         height: 100vh;
     } */
     .popup {
-      width: 500px;    
-      height: 300px;     
+      width: 500px;   
     }
+
     .close-btn {
       width: 30px;
     }
@@ -92,14 +98,26 @@
       margin-top: 5%;
     }
 
+    .buttons {
+      flex-direction: row;
+    }
+
+    .top_logo {
+      width: 20%;
+    }
+
+    .bottom_logo {
+      width: 50%;
+    }
+
+
   }
 
 
   /*********************************************************** For Desktop */
   @media only screen and (min-width: 1000px){
     .popup {
-      width: 800px;    
-      height: 300px;  
+      width: 800px;
     }
     .close-btn {
       width: 40px;
@@ -108,4 +126,140 @@
     .about-title {
       margin-top: 5%;
     }
+    
+    .logos {
+      align-items: center;
+      justify-content: center;
+      flex-direction: row-reverse;
+    }
+
+    .top_logo {
+      width: 13%;
+      margin: 0;
+      margin-right: 3rem;
+    }
+
+    .bottom_logo {
+      width: 50%;
+      margin: 0;
+    }
+
+    .buttons {
+      width: 50%;
+      justify-content: space-around;
+    }
+
+  }
+
+
+  /*Landing Page Button Styling */
+
+  .button {
+    border: none;
+    background-color: #ebebf0;
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    margin: 20px;
+    width: 150px;
+  }
+
+  .button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 10px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(155, 155, 155, 0.2);
+    transition: -webkit-transform 0.6s cubic-bezier(0, 0.9, 0.13, 0.9);
+    transition: transform 0.6s cubic-bezier(0, 0.9, 0.13, 0.9);
+    transition: transform 0.6s cubic-bezier(0, 0.9, 0.13, 0.9), -webkit-transform 0.6s cubic-bezier(0, 0.9, 0.13, 0.9);
+    -webkit-transform: translate3D(0, 0, 0);
+            transform: translate3D(0, 0, 0);
+  }
+  .button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ebebf0;
+    z-index: -1;
+  }
+  .button:hover:before, .button:focus:before {
+    -webkit-transform: translate3D(10px, 0, 0);
+            transform: translate3D(10px, 0, 0);
+  }
+  .button:active:before {
+    -webkit-transform: translate3D(0, 0, 0);
+            transform: translate3D(0, 0, 0);
+  }
+  .button:focus, .button:active {
+    outline: none;
+  }
+  .button .button__inner {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #333;
+    padding: 1em 1.5em;
+    background-color: #fbfbfb;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: -webkit-transform 0.6s cubic-bezier(0, 0.9, 0.13, 0.9);
+    transition: transform 0.6s cubic-bezier(0, 0.9, 0.13, 0.9);
+    transition: transform 0.6s cubic-bezier(0, 0.9, 0.13, 0.9), -webkit-transform 0.6s cubic-bezier(0, 0.9, 0.13, 0.9);
+    position: relative;
+  }
+  .button:hover .button__inner, .button:focus .button__inner {
+    -webkit-transform: translate3D(0, -10px, 0);
+            transform: translate3D(0, -10px, 0);
+  }
+  .button:active .button__inner {
+    -webkit-transform: translate3D(0, 0, 0);
+            transform: translate3D(0, 0, 0);
+  }
+  .button:hover .button__inner, .button:focus .button__inner {
+    background-color: #fff;
+  }
+  
+  .button--secondary {
+    background-color: #00d18e;
+    z-index: 0;
+    margin: 20px;
+    width: 150px;
+  }
+  .button--secondary:after {
+    background-color: #00d18e;
+  }
+  .button--secondary .button__inner {
+    background-color: #00ffb2;
+  }
+  .button--secondary:hover .button__inner, .button--secondary:focus .button__inner {
+    background-color: #11ffb3;
+  }
+
+  .fuller-button {
+    color: white;
+    background: none;
+    border-radius: 0;
+    padding: 1.2em 5em;
+    letter-spacing: 0.35em;
+    font-size: 0.9em;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+    margin: 1em;
+    cursor: pointer;
+  }
+  .fuller-button.white {
+    box-shadow: inset 0 0 0.8em rgba(255, 255, 255, 0.3), 0 0 0.8em rgba(255, 255, 255, 0.3);
+    border: #fff solid 2px;
+  }
+  .fuller-button.white:hover {
+    color: rgba(0, 0, 0, 0.8);
+    background-color: #fff;
+    box-shadow: inset 0 0 0 rgba(255, 255, 255, 0.3), 0 0 1.2em rgba(255, 255, 255, 0.5);
   }

@@ -23,12 +23,12 @@ mainRouter.post("/storedata", (request, response) => {
   });
 });
 
-mainRouter.put("/", (request, response) => {
-  console.log("blah");
-});
+// mainRouter.put("/", (request, response) => {
+//   console.log("blah");
+// });
 
-mainRouter.delete("/", (request, response) => {
-  console.log("blah");
-});
+// mainRouter.delete("/", (request, response) => {
+//   console.log("blah");
+// });
 
 module.exports = mainRouter;

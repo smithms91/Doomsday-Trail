@@ -16,27 +16,6 @@ const storyComponent = {
        
         // angular.element(document.querySelector(".text")).append(vm.message[vm.counter].message);
 
-        // let i = 0;
-        // let txt = `Get ready! You have 15 seconds to grab 3 items. Choose wisely as the more calories in each food the better chance you have of survival.`; /* The text */
-        // let speed = 50; /* The speed/duration of the effect in milliseconds */
-        // let button = document.querySelector(".click");
-
-        // function typeWriter() {
-        //   if (i < txt.length) {
-        //       document.querySelector(".text").innerHTML += txt.charAt(i);
-        //       i++;
-        //       setTimeout(typeWriter, speed);
-        //   } else if (i >= txt.length) {
-        //     buttons();  
-        //   }
-        // }
-        // function buttons() {
-        //     button.style.display = "inline-block";
-        // }
-
-        // typeWriter();
-        // setTimeout(typeWriter, 1000);
-
      }]
 }
 
