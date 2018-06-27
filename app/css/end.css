@@ -83,5 +83,27 @@ border-radius: 50%;
   
   /*********************************************************** For Desktop */
   @media only screen and (min-width: 1000px){
-  
+    .jumping-female {
+      background: url("../img/sprites/girl_jump_300.png");
+      width: 300px;
+      height: 300px;
+      animation: jumping-female .75s steps(10) infinite;
+      margin: auto;
+    }
+    .jumping-male {
+      background: url("../img/sprites/boy_jump_300px.png");
+      width: 300px;
+      height: 300px;
+      animation: jumping-male .75s steps(6) infinite;
+      margin: auto;
+      
+    }
+    
+    @keyframes jumping-female {
+      100% { background-position: -3000px; }
+    }
+    @keyframes jumping-male {
+      100% { background-position: -1800px; }
+    }
+    
   }
