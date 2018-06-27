@@ -1,7 +1,12 @@
     <section class="landing_page_logo">
-        <img class="main_logo glow secondary-glow" src="../img/Other_Big_Full_Logo.png" alt="">
-        <button class="landing_buttons" type="button" ng-click="$ctrl.aboutGame();">About</button>
-        <button class="landing_buttons" type="button" ng-click="$ctrl.nextPage();">Play</button>
+        <div class="logos">
+            <img class="bottom_logo glow secondary-glow slide-down" src="../img/LogoW.png" alt="">
+            <img class="top_logo glow secondary-glow fade-in" src="../img/LightningBoltLogo.png" alt="">
+        </div>
+        <div class="buttons">
+            <button class="button" type="button" ng-click="$ctrl.aboutGame();"><span class="button__inner">About</span></button>
+            <button class="button" type="button" ng-click="$ctrl.nextPage();"><span class="button__inner">Play</span></button>
+        </div>
     </section>
 
 
