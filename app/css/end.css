@@ -15,15 +15,9 @@ nav {
 .end-container {
   background: url("../img/end-full.png");
   background-repeat: repeat-x;  
-<<<<<<< HEAD
-  background-size: auto 100%;
-  /* height: 100vh; */
-  padding: 0 5px;
-=======
   background-size: auto 100%;  
   padding: 0 5px;  
   height: 100vh;
->>>>>>> 4fec6245f30c6d324a749d0bab9ff3e30a67cb4b
 }
 
 .jumping-female {
