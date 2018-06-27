@@ -21,9 +21,13 @@ const prepperStatsComponent = {
         }
 
         vm.nextPage = (user) => {
-            foodService.pushUserStats(user);
-            $location.path("/story-component");
-            angular.element(document.body).removeClass("animate-background");
+            if (!user.sex) {
+                alert("You must select a character!");
+            } else {
+                foodService.pushUserStats(user);
+                $location.path("/story-component");
+                angular.element(document.body).removeClass("animate-background");
+            }
         }
     }]
 }
