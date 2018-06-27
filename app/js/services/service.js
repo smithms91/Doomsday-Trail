@@ -8,7 +8,6 @@ function foodService($http) {
   let bagSize = 6;
   let user = {};
   
-  
   let locations = [
     {
       name: "Home", 
@@ -44,7 +43,6 @@ function foodService($http) {
       // cant put a string in this console.log with an object  
       // console.log(response);  
       foodDatabaseItems = response;
-     
     });
   };
 

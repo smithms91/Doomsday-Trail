@@ -103,7 +103,7 @@ ng-view {
   /*Your Itmes container */
   .your-items-container {
     margin-top: 20px
-  }
+}
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -119,7 +119,6 @@ input[type=number]::-webkit-outer-spin-button {
     display: none;
   }
 }
-
 
 /*********************************************************** For Desktop */
 @media only screen and (min-width: 1000px){

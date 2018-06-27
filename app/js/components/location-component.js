@@ -12,16 +12,16 @@ const locationComponent = {
       vm.locationItems = foodService.randomizeFoods(vm.counter);
       vm.bagItems = foodService.getBagItems();
       vm.currentMessage = vm.currentLocation[vm.counter].message;
-      vm.timeleft = vm.currentLocation[vm.counter].timer;
+      vm.timeleft = vm.currentLocation[vm.counter].timer + 1;
 
       vm.currentUser = angular.copy(foodService.getUserStats());
       console.log(vm.currentUser);
 
       if (vm.currentUser.sex === "male") {
-        vm.timerAnimation = `animation: walk-east-male .5s steps(10) infinite,forward ${vm.currentLocation[vm.counter].timer}s linear;`;
+        vm.timerAnimation = `animation: walk-east-male .5s steps(10) infinite,forward ${vm.currentLocation[vm.counter].timer + 1}s linear;`;
         vm.userClass = "male";
       } else if (vm.currentUser.sex === "female") {
-        vm.timerAnimation = `animation: walk-east-female .5s steps(10) infinite,forward ${vm.currentLocation[vm.counter].timer}s linear;`;
+        vm.timerAnimation = `animation: walk-east-female .5s steps(10) infinite,forward ${vm.currentLocation[vm.counter].timer + 1}s linear;`;
         vm.userClass = "female";
       }
 
@@ -54,7 +54,7 @@ const locationComponent = {
       }
 
     // timeleft = 10;
-    vm.downloadTimer = setInterval(function(){
+    vm.downloadTimer = setInterval(() => {
       vm.timeleft--;
       document.getElementById("countdowntimer").innerHTML = vm.timeleft;
       if (vm.timeleft <= 0) {

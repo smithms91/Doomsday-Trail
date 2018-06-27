@@ -9,11 +9,6 @@ const landingPageComponent = {
         angular.element(document.body).addClass("animate-background");
 
         vm.popup = false;
-        vm.tempFoodArray;
-        // for (let i = 0; i < vm.foodDatabase.length; i++) {
-        //     vm.tempFoodArray.push(foodService.getFoodItems(vm.foodDatabase[i]));
-        // }
-        // console.log(vm.foodArray);
 
         vm.close = () => {
             vm.popup = false;
@@ -76,20 +71,31 @@ const landingPageComponent = {
             alert("cheats activated");
         }
 
-        // vm.makeTheCall = () => {
-        //     console.log("make the call button working")
-        //     vm.tempFoodArray = foodService.getFoodItems();
-        // };
-
-        // SAVE THIS FOR LATER USE, IN CASE WE WANT TO ADD MORE FOOD.
-        // vm.pushToDB = (food) => {
-        //     console.log(food);
-        //     for (let i = 0; i < food.length; i++) {
-        //         foodService.addFoodItemsToDB(food[i]);
-        //     }
-        // };
     }]
 }
 
 angular.module("app").component("landingPageComponent", landingPageComponent);
 
+
+
+
+// STORE THE API DATA WE GRABBED IN A TEMPORARY ARRAY 
+// vm.tempFoodArray;
+// for (let i = 0; i < vm.foodDatabase.length; i++) {
+//     vm.tempFoodArray.push(foodService.getFoodItems(vm.foodDatabase[i]));
+// }
+// console.log(vm.foodArray);
+
+// JAVASCRIPT CODE FOR THE BUTTONS WE USED TO MAKE THE API CALL AND PUSH THE DATA TO OUR DATABASE
+// vm.makeTheCall = () => {
+//     console.log("make the call button working")
+//     vm.tempFoodArray = foodService.getFoodItems();
+// };
+
+// SAVE THIS FOR LATER USE, IN CASE WE WANT TO ADD MORE FOOD.
+// vm.pushToDB = (food) => {
+//     console.log(food);
+//     for (let i = 0; i < food.length; i++) {
+//         foodService.addFoodItemsToDB(food[i]);
+//     }
+// };

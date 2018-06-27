@@ -8,15 +8,11 @@ const storyComponent = {
         vm.counter = foodService.returnCount();
         vm.message = foodService.returnLocations();
         console.log(vm.message);
-        // document.body.style.backgroundImage = "url('../img/story-building-background.png')";
 
         vm.nextPage = () => {
             $location.path("/location-component");
         }
-       
-        // angular.element(document.querySelector(".text")).append(vm.message[vm.counter].message);
-
-     }]
+    }]
 }
 
 

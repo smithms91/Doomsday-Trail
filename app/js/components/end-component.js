@@ -7,7 +7,11 @@ const endComponent = {
         vm.endBag = foodService.getBagItems();
         vm.userStuff = foodService.getUserStats();
         //vm.sex for end character
-        vm.sex = vm.userStuff.sex
+        if (vm.userStuff.sex === 'male') {
+            vm.addClass = 'jumping-male';
+        } else if (vm.userStuff.sex === 'female') {
+            vm.addClass = 'jumping-female';
+        }
         vm.totalCal = 0;
         
 

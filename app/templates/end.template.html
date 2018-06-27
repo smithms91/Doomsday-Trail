@@ -4,8 +4,7 @@
 <p>Although you struggled with your directions, you eventually make it to Adam's Hidden Bunker.  Your journey has ended... for now.</p>
 <!-- With your remaining rations, you use the secret knock on his door, and moments later, he opens the hatch to your relief. -->
 
-<div class="jumping-female" ng-show="$ctrl.sex === 'female'"></div>
-<div class="jumping-male" ng-show="$ctrl.sex === 'male'"></div>
+<div class="{{$ctrl.addClass}}"></div>
 
 <section class="final-numbers">
         <p>You have collected {{ $ctrl.totalCal }} calories.</p>
