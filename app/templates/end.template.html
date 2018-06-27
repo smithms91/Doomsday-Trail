@@ -1,6 +1,6 @@
 <nav-component></nav-component>
 <section class="end-container">
-<h3 class="end-heading">The End?</h3>
+<h3 class="end-heading font-headings">The End?</h3>
 <p>Although you struggled with your directions, you eventually make it to Adam's Hidden Bunker.  Your journey has ended... for now.</p>
 <!-- With your remaining rations, you use the secret knock on his door, and moments later, he opens the hatch to your relief. -->
 
@@ -12,7 +12,7 @@
         <p>The calories you collected can sustain you for {{ $ctrl.totalDays + 21 }} days, assuming the worst has passed.</p> 
     </section>
 
-<h4 class="final-bag"> In your bug out bag:</h4>
+<h4 class="final-bag font-headings"> In your bug out bag:</h4>
 <div class="final_container">
     <div class="final-items" ng-repeat="item in $ctrl.endBag track by $index">
         <img class="final-food-img hidden-for-small" ng-src="{{ item.img }}">

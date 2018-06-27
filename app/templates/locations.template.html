@@ -2,14 +2,14 @@
 
 <section class="locations-body">
     <div class="main">
-        <span class="font-headings" id="countdowntimer"></span>
+        <span class="countdown-timer" id="countdowntimer"></span>
         <div class="{{$ctrl.userClass}} positioning" style="{{$ctrl.timerAnimation}}"></div>
     </div>
 
     <section class="footer-content">
 
         <section class="story">
-            <h3>You are at {{ $ctrl.currentLocation[$ctrl.counter].name }}</h3>
+            <h3 class="font-headings">You are at {{ $ctrl.currentLocation[$ctrl.counter].name }}</h3>
             <p> {{ $ctrl.currentMessage }} </p>
         </section>
 

@@ -18,7 +18,7 @@ const endComponent = {
         for (let i = 0; i < vm.endBag.length; i++) {
             vm.totalCal += vm.endBag[i].cal;
         }
-        vm.totalDays = Math.floor(vm.totalCal / Number(vm.userStuff.result));
+        vm.totalDays = Math.ceil(vm.totalCal / Number(vm.userStuff.result));
 
         console.log(vm.userStuff);
         console.log(vm.totalDays);
