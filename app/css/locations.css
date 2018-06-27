@@ -57,6 +57,7 @@ nav {
     border: #777777 1px solid;
     border-radius: 5px;
     margin: 5px;
+    justify-content: center;
 }
 
 #countdowntimer {
@@ -216,8 +217,14 @@ nav {
     border: #777777 1px solid;
     border-radius: 5px;    
     flex-direction: column;
-  }  
+  } 
+  
+  #countdowntimer {
+      font-size: 5rem;
+  }
 }
+
+
 
 @media only screen and (min-width: 1000px) {
     .main {

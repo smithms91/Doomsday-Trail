@@ -18,7 +18,7 @@ function foodService($http) {
       timermessage: "The front door busts open and several rioters crash through! You better make a break for it before they find you!"
     },
     {
-      name: "Gas Station",
+      name: "the Gas Station",
       foodSize: 8,
       img: "/img/gas-station-dark.jpg",
       message: "You escape down the street from your home, passing disabled cars all around you. You walk for an hour, before finally come across the nearest gas station. It already looks pretty picked over but you take cover within as you hear gun shots in the distance. They sound like they are getting closer.",

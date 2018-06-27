@@ -98,12 +98,8 @@
   100% { background-position: 0 0; background-color: skyblue; }
 }
 
-#about-popup {
-  transition: all .5s;
-}
-
 .ng-hide {
-  width: 0px;
+  display: none;
 }
 
 /************************************************************** For Tablet */
