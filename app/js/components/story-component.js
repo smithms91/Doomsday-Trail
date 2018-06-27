@@ -7,13 +7,14 @@ const storyComponent = {
         foodService.getFoodItemsFromDB();
         vm.counter = foodService.returnCount();
         vm.message = foodService.returnLocations();
+        console.log(vm.message);
         // document.body.style.backgroundImage = "url('../img/story-building-background.png')";
 
         vm.nextPage = () => {
             $location.path("/location-component");
         }
        
-        angular.element(document.querySelector(".text")).append(vm.message[vm.counter].message);
+        // angular.element(document.querySelector(".text")).append(vm.message[vm.counter].message);
 
         // let i = 0;
         // let txt = `Get ready! You have 15 seconds to grab 3 items. Choose wisely as the more calories in each food the better chance you have of survival.`; /* The text */

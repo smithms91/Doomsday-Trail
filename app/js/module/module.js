@@ -1,7 +1,7 @@
 "use strict";
 
 angular
-  .module("app", ['ngRoute'])
+  .module("app", ['ngRoute', 'ngAnimate'])
   .config(($routeProvider) => {
     $routeProvider
       .when("/landing-page-component", {
