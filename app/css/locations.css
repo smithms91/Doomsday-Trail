@@ -125,7 +125,8 @@ nav {
 
 .food_img {
     border-radius: 100%;
-    border: 2px solid yellow;
+    background: white;
+    
 }
 
 .male {
