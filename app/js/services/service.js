@@ -40,8 +40,11 @@ function foodService($http) {
     $http({
       method: "GET",
       url: "/portal/storedata"
-    }).then((response) => {
+    }).then((response) => {  
+      // cant put a string in this console.log with an object  
+      // console.log(response);  
       foodDatabaseItems = response;
+     
     });
   };
 
@@ -148,8 +151,8 @@ angular
   .factory("foodService", foodService);
 
 
-    // THIS CODE IS FOR ADDING ITEMS. WE CAN SET UP THE ARRAY WITH NEW FOODS AND USE THIS TO
-    // CALL THE API AND STORE MORE DATA TO OUR DATABASE.
+    // Use if we need to do a new API request 
+    
     // for (let i = 0; i < foodWordlist.length; i++) 
     //   $http.post('https://trackapi.nutritionix.com/v2/natural/nutrients', 
     //     { 'query': `${foodWordlist[i]}`,
@@ -158,8 +161,8 @@ angular
     //     },        
     //     { headers: {
     //       'Content-Type':'application/json', 
-    //         // TONY ID 41610192
-    //       'x-app-id':'182d0921', 
+    //         
+    //       'x-app-id':'182d82d0921', 
     //       'x-app-key':'b2570b50f16f5c4d418dec4629a97a97'
     //     }
     //   }).then((response) => {
@@ -179,7 +182,7 @@ angular
   //     });  
   // };
 
-  // OUR RANDOM FOODWORD LIST THAT WE NEED FOR THE FUNCTION ABOVE
+  // Random food list for us to loop through 
   // let foodWordlist = [
   //   "Cheese",
   //   "Eggs",
