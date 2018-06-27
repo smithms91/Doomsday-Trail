@@ -40,8 +40,11 @@ function foodService($http) {
     $http({
       method: "GET",
       url: "/portal/storedata"
-    }).then((response) => {
+    }).then((response) => {  
+      // cant put a string in this console.log with an object  
+      // console.log(response);  
       foodDatabaseItems = response;
+     
     });
   };
 
@@ -157,8 +160,8 @@ angular
     //     },        
     //     { headers: {
     //       'Content-Type':'application/json', 
-    //         // TONY ID 41610192
-    //       'x-app-id':'182d0921', 
+    //         
+    //       'x-app-id':'182d82d0921', 
     //       'x-app-key':'b2570b50f16f5c4d418dec4629a97a97'
     //     }
     //   }).then((response) => {
@@ -178,7 +181,7 @@ angular
   //     });  
   // };
 
-  // OUR RANDOM FOODWORD LIST THAT WE NEED FOR THE FUNCTION ABOVE
+  // Random food list for us to loop through 
   // let foodWordlist = [
   //   "Cheese",
   //   "Eggs",

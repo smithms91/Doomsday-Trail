@@ -3,9 +3,10 @@
 <section class="prepper-body">
     <form class="prepper_form" ng-submit="$ctrl.calsPerDay();">
         
-        <h5 class="stat_header font-headings">Enter in your character stats</h5>
+        <h5 class="stat_header font-headings">Choose a Character</h5>
 
         <div class="male_female">
+            
 
             <div id="male">
                 <input ng-model="$ctrl.user.sex" type="radio" class="radio_item" value="male" name="item"
@@ -22,6 +23,7 @@
                 </label> 
             </div>
         </div>
+        <h5>Enter Stats</h5>
 
         <!--With bootstrap-->
         <div class="form-group">
