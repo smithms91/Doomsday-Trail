@@ -101,7 +101,7 @@
 @media only screen and (min-width: 600px){
   .story-background {
     background-image: url("../img/story-building-background.png"); 
-    
+    background-size: contain;
   }
 
   .talk-bubble {
