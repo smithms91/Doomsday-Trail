@@ -3,15 +3,18 @@
   padding: 0;
 }
 .background-color {
-  background: linear-gradient(to bottom, #333399 0%, #ccffcc 100%);
+  background: linear-gradient(to bottom, #333399 0%, #696E74 100%);
   z-index: -2;
+  
 }
 
 .story-background {
   
   background-image: url("../img/story-building-background.png"); 
+  background-repeat: repeat-x;
   height: 100vh;
-  
+ 
+ 
 }
 
 /* Story Bubble */
