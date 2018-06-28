@@ -21,7 +21,7 @@ nav {
 }
 
 .jumping-female {
-  background: url("../img/sprites/girl_jump_mobile_120.png");
+  background: url("../img/sprites/girl_jump_120.png");
   width: 120px;
   height: 120px;
   animation: jumping-female .75s steps(10) infinite;
@@ -88,17 +88,16 @@ border-radius: 50%;
   @media only screen and (min-width: 1000px){
     .jumping-female {
       background: url("../img/sprites/girl_jump_300.png");
-
       width: 300px;
       height: 300px;
-      animation: jumping-female .75s steps(10) infinite;
+      animation: jumping-female .9s steps(10) infinite;
       margin: auto;
     }
     .jumping-male {
       background: url("../img/sprites/boy_jump_300px.png");
       width: 300px;
       height: 300px;
-      animation: jumping-male .75s steps(6) infinite;
+      animation: jumping-male .9s steps(6) infinite;
       margin: auto;
       
     }
@@ -110,9 +109,5 @@ border-radius: 50%;
       100% { background-position: -1800px; }
     }
     
-    .final_container {
-      border: 1px solid;
-    padding: 10px;
-    box-shadow: 5px 10px 18px white;
-    }
+    
   }

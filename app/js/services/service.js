@@ -26,7 +26,7 @@ function foodService($http) {
       timerMessage: "The glass shatters, and bullets rip through the wall behind you. You see several people attacking each other and decide in your best interests to make a break for it."
     },
     {
-      name: "Supermarket", 
+      name: "a Supermarket", 
       foodSize: 10, 
       img: "/img/empty-shelf.jpg",
       message: "You feel you have been aimlessly running, not even aware of where you are anymore. By some subconscious decision, you find yourself at the supermarket, where glass has been broken out, destroyed baskets litter the parking lot, and a darkness blankets the inside. Several lone people scatter from various openings, and the sounds of a distant uproar seem to be approaching fast. Perhaps there is something inside that you can take with you before the inevitable arrives.",

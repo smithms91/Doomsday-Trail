@@ -23,6 +23,8 @@ const prepperStatsComponent = {
         vm.nextPage = (user) => {
             if (!user.sex) {
                 alert("You must select a character!");
+            } else if (!user.username) {
+                alert("Please enter your name.")
             } else {
                 foodService.pushUserStats(user);
                 $location.path("/story-component");

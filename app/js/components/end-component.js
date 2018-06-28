@@ -6,6 +6,7 @@ const endComponent = {
         const vm = this;
         vm.endBag = foodService.getBagItems();
         vm.userStuff = foodService.getUserStats();
+        vm.username = vm.userStuff.username;
         //vm.sex for end character
         if (vm.userStuff.sex === 'male') {
             vm.addClass = 'jumping-male';
@@ -13,7 +14,7 @@ const endComponent = {
             vm.addClass = 'jumping-female';
         }
         vm.totalCal = 0;
-        
+        console.log(vm.userStuff.username);        
 
         for (let i = 0; i < vm.endBag.length; i++) {
             vm.totalCal += vm.endBag[i].cal;
