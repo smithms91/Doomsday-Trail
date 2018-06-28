@@ -16,8 +16,8 @@ nav {
   background: url("../img/end-full.png");
   background-repeat: repeat-x;  
   background-size: auto 100%;  
-  padding: 0 5px;  
-  height: 100vh;
+  padding: 0 5px;   
+  background-attachment: fixed;
 }
 
 .jumping-female {
