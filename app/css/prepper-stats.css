@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+.stat_header {
+    font-size: 2rem;
+    padding: 20px;
+}
 
 .prepper-body {
     background-image: url("../img/layers-end/l1_sky-mobile.png"); 
@@ -14,7 +18,6 @@
 }
 .stat_header{
     margin-bottom: 0;
-
 }
 
 .prepper_form {
@@ -79,6 +82,7 @@ form {
 .go_button {
     width: 100%;
     padding: .25rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -91,6 +95,7 @@ form {
     .stat_header {
         font-size: 3rem;       
     }
+
     .male_female {
         display: flex;
         justify-content: space-evenly;
