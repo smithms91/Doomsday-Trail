@@ -17,7 +17,7 @@ body {
   align-items: center;
   font-family: 'Oswald', sans-serif;
   text-align: center;
-  color: white;
+  color: white;  
 }
 
 ng-view {
@@ -92,23 +92,6 @@ ng-view {
   right: 0;
 }
 
-.item_box {
-  background-color: grey;
-  width: 75px;
-  height: 75px;
-  margin: 10px;
-}
-
-.bug-out-bag {
-  background-color: red;
-  width: 75px;
-  height: 75px;
-  margin: 10px;
-}
-  /*Your Itmes container */
-  .your-items-container {
-    margin-top: 20px
-}
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 

@@ -2,15 +2,21 @@
   margin: 0;
   padding: 0;
 }
+.background-color {
+  background: linear-gradient(to bottom, #333399 0%, #ccffcc 100%);
+  z-index: -2;
+}
 
 .story-background {
+  
   background-image: url("../img/story-building-background.png"); 
   height: 100vh;
+  
 }
 
 /* Story Bubble */
 .talk-bubble {
-    margin: 40px;
+    margin-top: 30%;
     display: inline-block;
     position: relative;
     width: 80%;
@@ -96,8 +102,8 @@
   }
 
   .talk-bubble {
-    margin-top: 200px; 
-    width: 50%;
+    margin-top: 10%; 
+    width: 30%;
     height: auto;
        
   }

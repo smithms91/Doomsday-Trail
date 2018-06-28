@@ -46,6 +46,7 @@ nav {
     display: flex;
     flex-wrap: wrap;   
     width: 100%;
+    cursor: url(../img/icons/add.png), auto;
 }
     
 
@@ -107,7 +108,7 @@ nav {
     justify-content: center;   
     border: #777777 1px solid;
     border-radius: 5px;
-    cursor: url("img/remove-item.png"), auto;
+    cursor: url(../img/icons/delete.png), auto;
 }
 
 .question-mark {
@@ -115,7 +116,7 @@ nav {
 }
 
 .male {
-    background: url("../img/sprites/male_run.png");
+    background: url("../img/sprites/boy_run_120.png");
     width: 120px;
     height: 120px;
     /* animation: walk-east-male .5s steps(10) infinite; */
@@ -123,9 +124,9 @@ nav {
   }
   
 .female {
-    background: url("../img/sprites/female_run.png");
-    width: 128px;
-    height: 128px;
+    background: url("../img/sprites/girl_run_120.png");
+    width: 120px;
+    height: 120px;
     /* animation: walk-east-female .5s steps(10) infinite; */
     /* position: fixed; */
 }
@@ -139,7 +140,7 @@ nav {
   }
   
   @keyframes walk-east-female {
-    100% { background-position: -1280px; }
+    100% { background-position: -1200px; }
   }
   
   @keyframes forward {
@@ -184,12 +185,14 @@ nav {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        cursor: url(../img/icons/add.png), auto;
     }
    
     .available-food-img {
         width: 50px;
         height: 50px;
         margin-top: 8px;
+        
     }
     .hidden-for-small {
         display: block;
@@ -207,6 +210,7 @@ nav {
         display: flex;        
         cursor: url("img/remove-items-lg.png"), auto;
         flex-direction: column;
+        cursor: url(../img/icons/delete.png), auto;
     }
 
   .available-items {

@@ -1,15 +1,15 @@
 <nav-component></nav-component>
 <section class="end-container">
 <h3 class="end-heading font-headings">The End?</h3>
-<p>Although you struggled with your directions, you eventually make it to Adam's Hidden Bunker.  Your journey has ended... for now.</p>
+<p>Although you struggled with your directions, you eventually make it to the Hidden Bunker.  Your journey has ended... for now.</p>
 <!-- With your remaining rations, you use the secret knock on his door, and moments later, he opens the hatch to your relief. -->
 
 <div class="{{$ctrl.addClass}}"></div>
 
 <section class="final-numbers">
-        <p>You have collected {{ $ctrl.totalCal }} calories.</p>
+        <p>{{ $ctrl.username }} you have collected {{ $ctrl.totalCal }} calories.</p>
         <!-- add an addtional 3 weeks after they are out of calorie--> 
-        <p>The calories you collected can sustain you for {{ $ctrl.totalDays + 21 }} days, assuming the worst has passed.</p> 
+        <p>You can live 21 days without food. With the additional calories you collected, you can survive {{ $ctrl.totalDays + 21 }} days.</p> 
     </section>
 
 <h4 class="final-bag font-headings"> In your bug out bag:</h4>
