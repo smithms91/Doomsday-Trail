@@ -55,7 +55,7 @@ nav {
 .final-items {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   border: 1px solid rgb(179, 175, 175);
   margin: 3px;
