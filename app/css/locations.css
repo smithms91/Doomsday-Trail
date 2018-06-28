@@ -175,7 +175,10 @@ nav {
         background-color: #555555;
         padding: 25px;
         flex-basis: 35%;
-    }   
+    } 
+    .story-size {
+        font-size: 1.5rem;
+    }  
     .available-items-container {        
         width: 40%; 
         padding: 25px;      

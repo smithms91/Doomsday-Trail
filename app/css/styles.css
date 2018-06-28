@@ -114,6 +114,9 @@ input[type=number]::-webkit-outer-spin-button {
   .hidden-for-large {
     display: none;
   }
+  .bg-transparent {
+    opacity: .5;
+  }
 }
 
 /*********************************************************** For Desktop */
