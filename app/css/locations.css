@@ -115,7 +115,7 @@ nav {
 }
 
 .male {
-    background: url("../img/sprites/male_run.png");
+    background: url("../img/sprites/boy_run_120.png");
     width: 120px;
     height: 120px;
     /* animation: walk-east-male .5s steps(10) infinite; */
@@ -123,7 +123,7 @@ nav {
   }
   
 .female {
-    background: url("../img/sprites/female_run.png");
+    background: url("../img/sprites/girl_run_120.png");
     width: 128px;
     height: 128px;
     /* animation: walk-east-female .5s steps(10) infinite; */
