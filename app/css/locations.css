@@ -174,6 +174,7 @@ nav {
         border-left: #777777 1px solid;
         background-color: #555555;
         padding: 25px;
+        flex-basis: 35%;
     }   
     .available-items-container {        
         width: 40%; 
@@ -202,6 +203,7 @@ nav {
         background-color: #555555;
         border-left: #2e2e2e 1px solid;
         color: white;
+        flex-basis: 35%;
     }
     .bag-item-place-holder {
         height: 100px;
