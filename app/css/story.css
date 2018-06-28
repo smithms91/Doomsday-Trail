@@ -102,15 +102,25 @@
   }
 
   .talk-bubble {
-    margin-top: 10%; 
-    width: 30%;
+    margin-top: 20%; 
+    width: 80%;
     height: auto;
        
+  }
+  .text {
+    font-size: 1.4rem;
+    line-height: 150%;
+    
   }
 }
 
 
 /*********************************************************** For Desktop */
 @media only screen and (min-width: 1000px){
-
+  .talk-bubble {
+    margin-top: 10%; 
+    width: 30%;
+    height: auto;
+       
+  }
 }
