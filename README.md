@@ -1,3 +1,3 @@
 Welcome to Doomsday Trail!
 
-doomsday-trail.herokuapp.com
+https://doomsday-trail.herokuapp.com
